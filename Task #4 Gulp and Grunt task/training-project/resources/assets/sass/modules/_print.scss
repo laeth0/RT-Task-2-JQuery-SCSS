@@ -1,0 +1,120 @@
+@media print {
+    .breadcrumb,
+    .glyphicon-th {
+        display: none;
+    }
+    .bg-white {
+        margin-top: -140px;
+        border-bottom: 2px solid;
+    }
+    .footer {
+        display: none;
+    }
+    .btn-primary {
+        display: none;
+    }
+    .bottom-horizontal-line {
+        .pull-right {
+            .col-sm-4 {
+                .bold { 
+                    position: relative; 
+                    left: 200px;
+                }   
+            }
+            .col-sm-8 {
+                output {    
+                    position: absolute;
+                    left: 360px;
+                    top: -52px;
+                }
+            }
+        }
+    }
+    .center-parent:nth-child(1) {
+        position: absolute;
+        top: -45px;
+        left: 100px;
+    }
+    .center-parent:nth-child(2),
+    .center-parent:nth-child(3) {
+        display: none;
+    }
+    .col-sm-2 {
+        margin-left: 400px;
+        label {
+            margin-top: 0px;
+            margin-left: 200px;
+        }
+    }
+    .row {
+        .col-xs-12 {
+            .table-wrapper {
+                min-height: 150px;
+            }
+        }
+    }
+    .bg-gray {
+        min-height: 100px;
+    }
+    .invoices {
+        .fa.fa-caret-down {
+            display: none;
+        }
+        table {
+            table-layout: inherit !important;
+            width: 100%;
+            thead {
+                tr {
+                    .customized-col {
+                        display: none;
+                    }
+                }
+            }
+            tbody {
+                tr {
+                    td:nth-child(1) {
+                        width: 30% !important;
+                    }
+                    td:nth-child(7) {
+                        display: none;
+                    }
+                }
+            }
+        }
+        .input-col-wrapper {
+            margin-top: -300px;
+            margin-left: 350px;
+        }
+        .print.pull-right {
+            padding-left: 30% !important;
+            padding-right: 0px !important;
+        }
+        .row.add-padding.bottom-horizontal-line {
+            padding-left: 30% !important;
+            padding-right: 0px !important;
+        }
+        .total-print {
+            //padding-bottom: 0px !important;
+            padding-left: 13% !important;
+            margin-bottom: -60px !important;
+        }
+    }
+
+    //report center general
+    .main-tabs{
+        display: none;
+    }
+    //report center/agency side
+    .shadow-header .row{
+        .col-sm-2{
+            margin-left: -400px !important;
+        }
+        .col-sm-9{
+        margin-top: -55px !important;
+        }
+    }
+    //report center/school side
+    .custom-tabs{
+        display: none;
+    }  
+}

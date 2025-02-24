@@ -1,0 +1,6 @@
+// @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+@use "tools/-tools-index";
+@use "base/-base-index";
+@use "modules/-modules-index";
+@use "pages/-pages-index";
+@use "base/variables"; // Import the variables

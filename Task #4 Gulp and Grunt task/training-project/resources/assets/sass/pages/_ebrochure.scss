@@ -1,0 +1,176 @@
+.ebrochure {
+  .container {
+    padding: 0px 50px;
+    .row {
+      margin-bottom: 60px;
+      .thumbnail {
+        border: 0px;
+        margin: 0px;
+      } 
+      .v-center-parent {
+        display: table;
+        height: 100%;
+        .v-center {
+          display: table-cell;
+          vertical-align: middle;
+          height: 100%;
+          input {
+            width: 100%;
+            font-size: 20px;
+            height: 45px;
+          }
+          input[name="ios_link"], input[name="android_link"] {
+            width: 83%;
+            margin-left: 30px;
+          }
+          h2 {
+            input[type="text"] {
+              padding-left: 6px;
+            }
+          }
+          h3 {
+            margin-top: 7px;
+          }
+          h4 {
+            text-align: right;
+          }
+        }
+      }
+      h5 {
+        color: darken($off-blue-gray, 5%);
+        font-size: 17px;
+      }
+    }
+    .img-wrapper {
+      //180px for img and 8px padding
+      height: 168px;
+      h4 {
+        color: $off-blue-gray;
+        font-size: 30px;
+      }
+      a {
+        h4 {
+          display: inline-block;
+          padding-left: 0px;
+        }
+        h2 {
+          display: inline-block;
+          color: $off-blue;
+          font-size: 34px;
+          margin: 0px;
+        }
+      }
+      .col-space {
+        margin: 12px 0px;
+        height: 45%;
+        h3 {
+          display: inline-block;
+          input[type="text"] {
+            padding-left: 6px;
+          }
+        }
+      }
+      .cell-1 {
+        width: 20%;
+        float: left;
+        margin-right: 5%;
+      }
+      .cell-2 {
+        width: 25%;
+        float: left;
+      }
+      .cell-3 {
+        width: 50%;
+        float: left;
+      }
+    }
+    .btn-lg {
+      padding: 4px 70px;
+    }
+    .modal-content {
+      .modal-header {
+        @include linear-gradient(top, $blue-g-start, $blue-g-end);
+        color: $white;
+        padding-left: 35px;
+      }
+      .modal-body {
+        padding: 0px;
+        .header-row {
+          padding: 40px 0px 40px 0px;
+          .sortby-lbl, .sendto-lbl {
+            margin: 0px;
+          }
+          .sortby-panel, .sendto-panel {
+            display: inline-block;
+            position: relative;
+            .sortby-btn, .sendto-btn {
+              height: 30px;
+            }
+          }
+          .sortby-menu, .sendto-menu {
+            left: 0;
+          }
+        }
+        .row {
+          margin: 0px;
+          padding: 25px 25px 25px 35px;
+          border-bottom: 1px solid $off-gray;
+          .btn {
+            background-color: $gray-btn;
+            color: #586b7f;
+            padding: 4px 30px;
+          }
+          label {
+            padding-left: 10px;
+            padding-right: 10px;
+          }
+          .info {
+            width: 100%;
+            display: inline-block;
+            padding-left: 10px;
+            div {
+              display: inline-block;
+            }
+            img {
+              float: left;
+              padding: 0px 5px;
+            }
+            h4 {
+              margin: 0px;
+              padding: 5px;
+              float: left;
+            }
+            h5 {
+              margin: 0px;
+              padding: 5px;
+              float: left;
+              clear: left;
+              color: $off-gray;
+              font-size: 18px;
+            }
+          }
+        }
+        .checkbox-wrapper {
+          float: right;
+        }
+      }
+      .modal-footer {
+        padding: 40px;
+        text-align: left;
+        border: 0px;
+        .btn-primary {
+          background-color: #498af3;
+          color: $white;
+          width: 100px;
+        }
+      }
+    }
+  }
+  .shadow {
+    padding: 0px;
+  }
+  .save {
+    float: right;
+    margin-right: 90px;
+  }
+}

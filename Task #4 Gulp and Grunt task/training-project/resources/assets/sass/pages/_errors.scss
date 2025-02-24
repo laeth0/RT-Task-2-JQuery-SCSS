@@ -1,0 +1,38 @@
+.error-404, .error-403 {
+	.row {
+		position: relative;
+		min-height: 150px;
+		h1, .btn {
+			text-align: center;
+			@include centerer(true,true);
+		}
+		h1 {
+			max-height: 120px;
+			overflow: hidden;
+		}
+		.btn {
+			margin-top: 80px;
+			width: 200px;
+		}
+	}
+}
+.error-403 {
+	.btn {
+		margin-top: 120px !important;
+	}
+}
+.deactivated-school {
+	.container {
+		min-height: 600px;
+		h2 {
+			margin: auto;
+		    margin-top: 10%;
+		    margin-bottom: 15px;
+		    max-width: 650px;
+		}
+		.red {
+			color: red;
+		}
+	}
+
+}

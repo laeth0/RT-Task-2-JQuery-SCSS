@@ -1,0 +1,285 @@
+.report-center {
+  .bg-gray {
+    .container {
+      min-height: 850px;
+      ul.main-tabs li a, ul.main-tabs li.active a {
+        color: $blue;
+      }
+      .search-wrapper {
+        @media screen and (min-width: $break-large) {
+          padding-left: 150px;
+        }
+      }
+      .search-row {
+        padding: 10px 0px;
+        margin: 30px 0px;
+        div[class^="col-"] {
+          margin-bottom: 3px;
+        }
+        .btn {
+          font-size: 18px;
+        }
+        .sortby-btn {
+          width: auto;
+          min-width: 130px;
+        }
+        .sortby-menu {
+          margin-right: 10px;
+        }
+      }
+      .custom-tabs ul.nav-tabs li {
+        margin: 5px 10px 5px 0px;
+        color: $off-gray;
+        a {
+          font-size: 18px;
+          line-height: 34px;
+        }
+      }
+      .grid-item {
+        a {
+          text-decoration: none;
+        }
+
+        img {
+          width: 80px;
+          height: 80px;
+        }
+        .name {
+          color: $off-blue;
+          font-size: 28px;
+          margin-left: 15px;
+        }
+        .number {
+          color: $off-gray;
+          font-size: 18px;
+          margin-left: 15px;
+        }
+        .delete-item {
+          position: absolute;
+          right: 5px;
+          top: 5px;
+          color: #f48488;
+        }
+      }
+      .shadow-wrapper {
+        margin: 60px 0px;
+        .shadow {
+          padding: 0px;
+          .shadow-header {
+            border-bottom: 3px solid $light-gray;
+            min-height: 170px;
+            display: table;
+            width: 100%;
+            .row {
+              display: table-cell;
+              text-align: center;
+              vertical-align: middle;
+              padding: 0px 30px;
+              div[class^="col-"] {
+                text-align: center;
+              }
+              img {
+                width: 60px;
+                height: 60px;
+                display: block;
+                margin: auto;
+              }
+              h3 {
+                color: $blue;
+              }
+            }
+          }
+          .shadow-body {
+            min-height: 200px;
+          }
+        }
+        .table-wrapper {
+          min-height: 500px;
+        }
+        table {
+          table-layout: fixed;
+          width: 100%;
+          padding: 0 50px;
+          thead {
+            tr {
+              border-bottom: 3px solid $light-gray;
+              margin-bottom: 10px;
+              th {
+                font-size: 22px;
+                padding: 20px 5px;
+                label {
+                  margin: 0px 0px 0px 55px;
+                  font-weight: 100;
+                }
+              }
+              th.cell-width {
+                width: 25%;
+              }
+              th:first-child {
+                white-space: nowrap;
+                padding-left: 10%;
+                width: 30%;
+
+              }
+            }
+          }
+          tbody {
+            tr {
+              vertical-align: top;
+              td {
+                padding: 15px 5px;
+                font-size: 22px;
+                label {
+                  font-size: 18px;
+                  font-weight: 100;
+                }
+                a {
+                  cursor: pointer;
+                }
+              }
+              td:first-child {
+                white-space: nowrap;
+                padding-left: 10%;
+              }
+              td.no-padding {
+                padding-left: 5px;
+              }
+              .paid {
+                color: $sea-green;
+              }
+              .outstanding {
+                color: $orange;
+              }
+              .increased {
+                color: $sea-green;
+              }
+              .decreased {
+                color: $dark-red;
+              }
+              .expired {
+                color: $dark-red;
+              }
+            }
+            //tr end
+            tr:first-child {
+              label {
+                margin-top: 40px;
+              }
+            }
+            .country-row {
+              td {
+                padding: 5px;
+              }
+              border-bottom: 2px solid $light-gray;
+            }
+          }
+        }
+      }
+      .print-download {
+        margin: 0px;
+        div[class^="col-"] {
+          padding: 0px;
+          margin-bottom: 2px;
+        }
+      }
+      .students-status {
+        .shadow {
+          padding: 5px 0px;
+          .row {
+            border-bottom: 1px solid $light-gray;
+            margin: 0px;
+            h4 {
+              font-size: 20px;
+              padding: 28px 5px;
+            }
+            h4:first-child {
+              font-weight: 500;
+              margin-left: 40px;
+            }
+            h4:last-child {
+              margin-right: 50px;
+            }
+            .active-student {
+              color: $sea-green;
+            }
+          }
+        }
+      }
+    }
+  }
+  .file-upload {
+    margin-top: 12px;
+    position: relative;
+  }
+  .upload-input {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 15px;
+    @include opacity(0);
+    width: 108px;
+    height: 32px;
+  }
+  #admissions_status {
+    .fileUpload {
+      cursor: pointer;
+      .upload-image {
+        background: url('../images/agency/upload-image.png') no-repeat center center;
+        background-size: contain;
+        float: left;
+        width: 65px;
+        height: 65px;
+        position: relative;
+        overflow: hidden;
+        border-radius: 50%;
+      }
+      img {
+        display: inline;
+        margin: 0 auto;
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
+  #number_of_students {
+    .StudentsModal {
+      @include border-radius(5px, 5px, 5px, 5px);
+      .close {
+        color: $white;
+        opacity: 0.8;
+      }
+      .modal-header {
+        padding: 30px 25px;
+        background: $soft-blue;
+        color: $white;
+        .modal-title {
+          font-size: 24px;
+        }
+      }
+      .modal-body {
+        font-size: 18px;
+        color: $off-blue;
+        text-decoration: none;
+        button {
+          width: 40%;
+        }
+      }
+    }
+  }
+  .admissons-status-page {
+    .shadow {
+      height: inherit;
+      .grid-item {
+        float: none;
+        &:not([style*="display: none"]):last-child > hr {
+          border: 0;
+          margin: 0;
+        }
+      }
+      .active{
+        color: $green;
+      }
+    }
+  }
+}
+

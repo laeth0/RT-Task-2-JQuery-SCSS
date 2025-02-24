@@ -1,0 +1,291 @@
+.agencyStudents {
+  .container {
+    padding: 0 50px;
+    .search-row {
+      margin-top: 40px;
+    }
+  }
+  .modal {
+    @include border-radius(5px, 5px, 5px, 5px);
+    .close {
+      color: $white;
+      opacity: 0.8;
+    }
+    .modal-header {
+      padding: 30px 55px;
+      background: $soft-blue;
+      color: $white;
+      .modal-title {
+        font-size: 20px;
+      }
+    }
+    .modal-body {
+      padding: 0;
+      ul {
+        padding: 0;
+        list-style-type: none;
+        li {
+          border-bottom: 1px solid $light-gray;
+          padding: 25px 15px;
+          font-size: 18px;
+          a {
+            color: $off-blue;
+            text-decoration: none;
+            padding-left: 37px;
+            &.student-type-1 {
+              background: url('../images/agency/agency-icon.png') 0 center no-repeat;
+              background-size: contain;
+            }
+            &.student-type-2 {
+              background: url('../images/agency/government-icon.png') 0 center no-repeat;
+              background-size: contain;
+            }
+            &.student-type-3 {
+              background: url('../images/agency/education-icon.png') 0 center no-repeat;
+              background-size: contain;
+            }
+            &.student-type-4 {
+              background: url('../images/agency/high-school-icon.png') 0 center no-repeat;
+              background-size: contain;
+            }
+            &.student-type-5 {
+              background: url('../images/agency/advertisers-icon.png') 0 center no-repeat;
+              background-size: contain;
+            }
+            &.student-type-6 {
+              background: url('../images/agency/custom-contact-icon.png') 0 center no-repeat;
+              background-size: contain;
+            }
+          }
+          &:last-child {
+            border: 0;
+          }
+        }
+      }
+    }
+  }
+
+  .student-list-item {
+    .fileUpload {
+      .upload-image {
+        background: url('../images/agency/upload-image.png') no-repeat center center;
+        background-size: contain;
+        float: left;
+        width: 80px;
+        height: 80px;
+        position: relative;
+        overflow: hidden;
+        border-radius: 50%;
+      }
+      img {
+        display: inline;
+        margin: 0 auto;
+        height: 100%;
+        width: 100%;
+      }
+    }
+    a {
+      text-decoration: none;
+    }
+
+    /*img{
+        width:80px;
+    }*/
+    .student-name {
+      color: $off-blue;
+      font-size: 24px;
+    }
+    .student-country {
+      color: $off-blue;
+      font-size: 20px;
+    }
+    .student-type {
+      color: $white;
+      background-color: $off-gray;
+      padding: 4px 12px;
+      font-size: 16px;
+      @include border-radius(4px, 4px, 4px, 4px);
+      width: auto;
+      float: left;
+      clear: both;
+      position: absolute;
+      bottom: 15px;
+      left: auto;
+      right: auto;
+      @extend .uppercase;
+    }
+    .student-item-status {
+      position: absolute;
+      top: 4px;
+      right: 4px;
+      z-index: 9;
+      @extend .uppercase;
+
+      .active {
+        color: $sea-green;
+      }
+      .inactive {
+        color: $dark-gray;
+      }
+    }
+
+  }
+
+}
+
+.student-page {
+
+  .fileUpload {
+    cursor: default;
+    margin-top: 30px;
+    height: 160px;
+    .upload {
+      height: 160px;
+    }
+    .upload-image {
+      background: url('../images/agency/upload-image.png') no-repeat center center;
+      background-size: contain;
+      float: left;
+      width: 150px;
+      height: 150px;
+      position: relative;
+      overflow: hidden;
+      border-radius: 50%;
+    }
+    img {
+      display: inline;
+      margin: 0 auto;
+      height: 100%;
+      width: 100%;
+    }
+  }
+
+  .student-name {
+    color: $off-blue;
+    height: 40px;
+    font-size: 30px;
+    border: 0;
+    width: auto;
+    box-shadow: none;
+  }
+  .student-country {
+    border-radius: 10px;
+    height: 45px;
+    width: 350px;
+    padding-left: 15px;
+    background-color: $light-gray;
+  }
+  .student-term {
+    border-radius: 1px;
+    font-size: 18px;
+    color: $white;
+    background: darken($gray-btn, 18%);
+    min-width: 130px;
+    height: 38px;
+    margin: 0 0 40px 12px;
+    text-align: center;
+    padding: 0 12px;
+    font-weight: 400;
+    vertical-align: middle;
+    line-height: 40px;
+  }
+  .send-msg {
+    @include border-radius(20px, 20px, 20px, 20px);
+    border: 1px solid darken($gray-btn, 18%);
+    font-size: 18px;
+    color: darken($gray-btn, 18%);
+    background: $white;
+    width: 180px;
+    height: 38px;
+    margin: 0 12px; 
+    &:focus {
+      outline: none; 
+      border: 2px solid darken($gray-btn, 25%);
+    }
+    .fa {
+      margin-right: 5px;
+    }
+  }
+
+  .country-name {
+    border: none;
+    box-shadow: none;
+    font-size: 18px;
+    font-weight: 600;
+    margin-top: -12px;
+    color: $off-blue-gray;
+  }
+  #student_info {
+    margin-top: 40px;
+  }
+  .tab-pane {
+    margin: 15px;
+    .row {
+      padding: 20px;
+      border-bottom: 2px solid $light-gray;
+      &:last-child {
+        border-bottom: 0;
+      }
+    }
+    .shadow {
+      margin: 5px 25px;
+    }
+    label {
+      font-weight: normal;
+      color: $off-blue-gray;
+      font-size: 22px;
+      padding-top: 5px;
+      margin-top: 7px;
+    }
+    input[type="text"], input[type="email"], textarea {
+      background: none;
+      box-shadow: none;
+      padding: 10px 5px;
+      font-size: 22px;
+      color: $dark-gray;
+      margin-top: 5px;
+      width: 60%;
+    }
+    .radio-btn-lbl {
+      color: $off-blue;
+      padding: 5px 20px;
+      margin-right: 3px;
+      position: relative;
+      &.selected {
+        border: 2px solid $off-blue;
+        @include border-radius(25px, 25px, 25px, 25px);
+      }
+      input[type="radio"] {
+        @include opacity(0);
+        position: absolute;
+        left: 0;
+        top: 0;
+      }
+    }
+  }
+   input[type="date"] {
+    margin-left: 1px;
+    font-size: 20px;
+    padding: 8px 5px;
+  }
+  select {
+    border-radius: 10px;
+    height: 45px;
+    width: auto;
+    padding-left: 15px;
+    background-color: #f3f6f9;
+    color: #000;
+  }
+  .term {
+    background: url("../images/agency/term-icon.png") no-repeat center center;
+    background-size: contain;
+    height: 35px;
+    margin-top: 10px;
+  }
+  .birthday {
+    background: url("../images/agency/birthday.png") no-repeat center center;
+    background-size: contain;
+    height: 35px;
+    margin-top: 10px;
+  }
+}

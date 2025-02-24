@@ -1,0 +1,88 @@
+.attraction {
+  .bg-gray {
+    .container {
+      min-height: 600px;
+    }
+  }
+  .shadow {
+    margin-bottom: 40px;
+    padding: 25px 0px;
+    .row {
+      margin: 0px;
+      padding: 6px 25px;
+      a {
+        color: $off-blue !important;
+        cursor: pointer;        
+        &:hover {
+          text-decoration: none;
+        }
+      }
+      .attr-link {
+        margin: 10px 0px;
+        input[type='text'] {
+          width: 80%;
+          padding-left: 4px;
+        }
+        .glyphicon-link {
+          padding-right: 6px;
+          vertical-align: -2px;
+          font-size: 16px;
+          color: lighten($off-blue,10%);
+        }
+      }
+      .glyphicon-remove-sign {
+        font-size: 18px;
+        color: darken($red,10%);
+        background: $white;
+        padding-right: 8px;
+        vertical-align: -3px;
+      }
+    }
+    .header-row {
+      border-bottom: 2px solid $light-gray;
+      label {
+        font-size: 20px;
+        color: $off-blue;
+      }
+      a {
+        float: right;
+        .glyphicon {
+          padding-right: 6px;
+          color: lighten($off-blue,15%);
+          font-size: 16px;
+        }
+      }
+    }
+    .footer-row {
+      border-top: 2px solid $light-gray;
+      .glyphicon {
+          padding-right: 8px;
+          color: lighten($green,15%);
+          font-size: 16px;
+          font-weight: 100;
+        }
+    }
+  }
+  .add-category-btn {
+    margin: 20px 0px;
+    margin-left: 15px;
+  }
+  #addCategoryModal {
+    .modal-body label {
+      color:$red;
+      margin-bottom: 0px;
+      margin-left: 10px;
+      font-size: 18px;
+      line-height: 36px;
+    }
+    .attr-add-cat{
+      padding: 6px 32px;
+      margin-top: 12px;
+    }
+  }
+  #confirm_delete_category {
+    .modal-body {
+      font-size: 16px;
+    }
+  }
+}

@@ -1,0 +1,83 @@
+.agencySchool {
+  #agencySchool-tab {
+    li.active a {
+      border-bottom: 4px solid $green;
+    }
+  }
+  #chooseSchool, #partnershipReqs {
+    min-height: 650px;
+    padding-top: 50px;
+  }
+  .availabel-schools {
+      form {
+        margin-bottom: 0;
+      }
+      .thumbnail {
+        @include box-shadow(2px, 2px, 5px, 5px, lighten($green, 15%));
+        img {
+          height: 150px;
+          width: 150px;
+        }
+        button {
+          border: none;
+          outline: none;
+          background: none;
+        }
+      }
+  }
+  .partnership-requests {
+    .thumbnail {
+      padding-bottom: 45px;
+      @include box-shadow(2px, 2px, 5px, 5px, lighten($green, 15%));
+      img {
+          height: 85px;
+          width: 90px;
+      }
+      .btn {
+        width: 80px;
+      }
+      .btn-success {
+        float: left;
+        margin-left: 20px;
+      }
+      .btn-danger {
+        float: right;
+        margin-right: 20px;
+      }
+      textarea {
+        resize: none;
+        background: white;
+        border: 2px solid $light-gray;
+        border-radius: 4px;
+        width: 100%;
+        font-size: 14px;
+        padding: 0 5px;
+        height: 102px;
+      }
+    }  
+  }
+  .thumbnail {
+    border: 0;
+    img {
+      @include border-radius(35px, 35px, 35px, 35px);
+      margin: auto;
+      margin-top: 25px;
+    }
+    h4 {
+      font-weight: 800;
+    }
+  }
+  #pRequestsCount {
+    display: inline-block;
+    position: absolute;
+    top: 22px;
+    left: 250px;
+    width: 25px;
+    height: 25px;
+    background: red;
+    text-align: center;
+    border-radius: 50%;
+    color: $white;
+    line-height: 26px;
+  }
+}

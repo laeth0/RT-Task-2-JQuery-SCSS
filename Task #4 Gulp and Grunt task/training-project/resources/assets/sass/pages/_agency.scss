@@ -1,0 +1,852 @@
+.agencies {
+    .container {
+        padding: 0 50px;
+    }
+    .bg-gray {
+        min-height: 650px;
+    }
+    .sortby-lbl {
+        white-space: nowrap;
+    }
+    .bottom-offset > .row {
+        .btn-primary {
+            width: 96%;
+        }
+        a.btn-primary {
+            margin-top: 15px;
+        }
+    }
+    .modal {
+        @include border-radius(5px, 5px, 5px, 5px);
+        .modal-header {
+            position: relative;
+            padding: 30px 55px;
+            background: $soft-blue;
+            color: $white;
+            .modal-title {
+                font-size: 20px;
+            }
+            .close {
+                position: absolute;
+                top: 10px;
+                right: 15px;
+                color: $white;
+                opacity: 0.8;
+            }
+        }
+        .modal-body {
+            padding: 0;
+          
+            ul {
+                padding: 0;
+                list-style-type: none;
+                li {
+                    border-bottom: 1px solid $light-gray;
+                    padding: 25px 15px;
+                    font-size: 18px;
+                    a {
+                        color: $off-blue;
+                        text-decoration: none;
+                        padding-left: 37px;
+                        &.agency-type-1 {
+                            background: url('../images/agency/agency-icon.png') 0 center no-repeat;
+                            background-size: contain;
+                        }
+                        &.agency-type-2 {
+                            background: url('../images/agency/government-icon.png') 0 center no-repeat;
+                            background-size: contain;
+                        }
+                        &.agency-type-3 {
+                            background: url('../images/agency/education-icon.png') 0 center no-repeat;
+                            background-size: contain;
+                        }
+                        &.agency-type-4 {
+                            background: url('../images/agency/high-school-icon.png') 0 center no-repeat;
+                            background-size: contain;
+                        }
+                        &.agency-type-5 {
+                            background: url('../images/agency/advertisers-icon.png') 0 center no-repeat;
+                            background-size: contain;
+                        }
+                        &.agency-type-6 {
+                            background: url('../images/agency/custom-contact-icon.png') 0 center no-repeat;
+                            background-size: contain;
+                        }
+                    }
+                    &:last-child {
+                        border: 0;
+                    }
+                }
+            }
+        }
+    }
+    .agency-list-item {
+        .shadow {
+            padding-top: 30px;
+        }
+        a {
+            text-decoration: none;
+        }
+        img {
+            width: 80px;
+        }
+        .agency-name {
+            color: $off-blue;
+            font-size: 24px;
+        }
+        .agency-id {
+            color: $off-blue;
+            font-size: 20px;
+        }
+        .agency-offices {
+            color: $off-gray;
+            font-size: 20px;
+        }
+        .agency-type {
+            color: $white;
+            background-color: $off-gray;
+            padding: 4px 12px;
+            font-size: 16px;
+            @include border-radius(4px,
+            4px,
+            4px,
+            4px);
+            width: auto;
+            float: left;
+            clear: both;
+            position: absolute;
+            bottom: 15px;
+            left: auto;
+            right: auto;
+            @extend .uppercase;
+        }
+        .agency-item-status {
+            position: absolute;
+            top: 4px;
+            right: 4px;
+            z-index: 9;
+            @extend .uppercase;
+            .active {
+                color: $sea-green;
+            }
+            .inactive {
+                color: $dark-gray;
+            }
+        }
+        .remove-patnership {
+            position: absolute;
+            color: $red;
+            top: 4px;
+            left: 10px;
+            font-size: 16px;
+            &:hover {
+                font-weight: 600;
+                color: red;
+            }
+        }
+    }
+    .fileUpload {
+        
+        .upload-image {
+            background: url('../images/agency/upload-image.png') no-repeat center center;
+            background-size: contain;
+            float: left;
+            width: 60px;
+            height: 60px;
+            position: relative;
+            overflow: hidden;
+            border-radius: 50%;
+            #theImg {
+                height: 150px;
+                border-radius: 50%;
+            }
+        }
+        img {
+            display: inline;
+            margin: 0 auto;
+            height: 100%;
+            width: 100%;
+        }
+    }
+    #confirm_remove_partnership {
+        .modal-body {
+            padding: 15px;
+            font-size: 16px;
+        }
+    }
+    #delete_agency {
+        cursor: pointer;
+    }
+    .control-row {
+        margin-bottom: 20px;
+        .ranking-btn {
+            padding: 5px 20px;
+            margin-top: 8px;
+            margin-left: 15px;
+            width: 212px;
+        }
+    }
+}
+
+.agency-page {
+    .container {
+        .form-group {
+            .list-inline {
+                li {
+                    button {
+                        height: 40px;
+                        margin-top: -2px;
+                        border-top-left-radius: 25px;
+                        border-bottom-left-radius: 25px;
+                        border-top-right-radius: 25px;
+                        border-bottom-right-radius: 25px;
+                        width: 160px;
+                        span {
+                            margin-right: 10px;
+                        }
+                    }
+                }
+            }
+            .btn-group {
+                float: right;
+                .btn-default {
+                    margin-right: 30px;
+                    padding-right: 10px;
+                    width: 180px;
+                    height: 45px;
+                    border-top-right-radius: 25px;
+                    border-bottom-right-radius: 25px;
+                    border-top-left-radius: 25px;
+                    border-bottom-left-radius: 25px;
+                    font-weight: bold;
+                    font-size: 18px;
+                    span {
+                        margin-left: 0px;
+                        padding-right: 20px;
+                    }
+                }
+                .btn-success,
+                .btn-primary {
+                    margin-right: 30px;
+                    border-radius: 5px;
+                    width: 160px;
+                    height: 45px;
+                    font-weight: bold;
+                    font-size: 18px;
+                    letter-spacing: 1px;
+                }
+            }
+        }
+    }
+    .bg-gray {
+        min-height: 650px; 
+    }
+    #partnershipMessageModal {
+        .modal-header {
+            padding: 15px;
+            h4 {
+                margin: 15px 0px 5px 0px;
+                font-size: 18px;
+            }
+        }
+        .modal-body {
+            textarea {
+                width: 100%;
+                font-size: 16px;
+                padding: 6px;
+                border: 1px dashed $off-gray;
+                resize: none;
+                outline: none;
+            }
+        }
+    }
+    .fileUpload {
+        cursor: default;
+        margin-top: 30px;
+        height: 160px;
+        .upload {
+            height: 160px;
+        }
+        .upload-image {
+            background: url('../images/agency/upload-image.png') no-repeat center center;
+            display: inline-block;
+            width: 150px;
+            height: 150px;
+            position: relative;
+            border-radius: 50%;
+        }
+        .upload-img-agency {
+            border-radius: 50%;
+        }
+        img {
+            height: 150px;
+            width: 150px;
+            border-radius: 50%;
+        }
+    }
+    .modal-body{
+        h3{
+            color: $off-blue;
+            font-family: inherit;
+            font-size: 20px;
+        }
+    }
+    .modal-header {
+        position: relative;
+        padding: 30px 55px;
+        background: $soft-blue;
+        color: $white;
+        .modal-title {
+            font-size: 20px;
+        }
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            color: $white;
+            opacity: 0.8;
+        }
+    }
+    .agency-name {
+        color: $off-blue;
+        height: 40px;
+        font-size: 28px;
+        width: auto;
+        box-shadow: none;
+        font-weight: 600;
+    }
+    .agency-id {
+        color: $off-gray;
+        font-size: 22px;
+        width: auto;
+        box-shadow: none;
+    }
+    .tab-pane {
+        margin: 15px;
+        .row {
+            padding: 20px;
+            border-bottom: 2px solid $light-gray;
+            &:last-child {
+                border-bottom: 0;
+            }
+        }
+        .shadow {
+            margin: 5px 25px;
+        }
+        .add_show_agency_user {
+            .shadow {
+                margin-bottom: 60px;
+            }
+        }
+        #add_user {
+            margin-left: 27px;
+        }
+        label {
+            font-weight: normal;
+            color: $off-blue-gray;
+            font-size: 22px;
+            padding-top: 5px;
+            margin-top: 7px;
+        }
+        input[type="text"],
+        input[type="email"],
+        textarea {
+            background: none;
+            box-shadow: none;
+            padding: 10px 5px;
+            font-size: 22px;
+            color: $dark-gray;
+            margin-top: 5px;
+            width: 60%;
+        }
+        .radio-btn-lbl {
+            color: $off-blue;
+            padding: 5px 20px;
+            margin-right: 3px;
+            position: relative;
+            &.selected {
+                border: 2px solid $off-blue;
+                @include border-radius(25px,
+                25px,
+                25px,
+                25px);
+            }
+            input[type="radio"] {
+                @include opacity(0);
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
+        }
+        .setting_notes-wraper {
+            input[type="text"],
+            textarea {
+                border: 1px dashed $soft-blue;
+                @include border-radius(10px,
+                10px,
+                10px,
+                10px);
+                width: 100%;
+                padding: 15px 20px;
+                outline: none;
+            }
+        }
+    }
+    .agency-contract-modal {
+        @extend .tab-pane;
+        .file-upload {
+            margin-top: 12px;
+        }
+        .upload-input {
+            position: absolute;
+            z-index: 2;
+            top: 0;
+            right: 15px;
+            @include opacity(0);
+            width: 108px;
+            height: 32px;
+        }
+        input.contract-amount-value {
+            color: $sea-green;
+            width: 135px;
+        }
+    }
+    .add-branch-office-btn {
+        font-size: 18px;
+    }
+    .main-office {
+        color: $off-blue;
+        font-size: 26px;
+        i {
+            font-size: 15px;
+            float: left;
+            margin-top: 10px;
+        }
+        label {
+            padding-left: 12px;
+            color: $off-blue-gray;
+            font-size: 26px;
+            padding-top: 0;
+            margin-top: 0;
+        }
+    }
+    #main_office_email {
+        padding: 10px 5px;
+        font-size: 22px;
+        color: #313941;
+        margin-top: 5px;
+    }
+    .main-office-id {
+        color: $off-gray;
+        margin-left: 25px;
+        font-size: 22px;
+    }
+    #agency_contract {
+        .contract-dates {
+            label {
+                width: 100%;
+            }
+            input {
+                //@extend .clean-input;
+                background: none;
+                box-shadow: none;
+                padding: 5px 10px;
+            }
+        }
+        input.contract-amount-value {
+            color: $sea-green;
+            min-width: 135px;
+        }
+        .shadow {
+            margin-bottom: 30px;
+        }
+        input[type="file"] {
+            right: 15px;
+            width: 108px;
+            height: 32px;
+        }
+        .file-upload {
+            float: left;
+            position: relative;
+            margin-top: 14px;
+            .btn {
+                position: relative;
+            }
+            .upload-input {
+                position: absolute;
+                z-index: 2;
+                top: 0;
+                right: 0px;
+                @include opacity(0);
+            }
+            .file-name a {
+                color: $dark-gray;
+                font-size: 20px;
+                text-decoration: underline;
+            }
+        }
+    }
+    .agency-settings {
+        .agency-restriction-label {
+            font-size: 22px;
+            color: $off-blue;
+        }
+        .agency-access-label {
+            font-size: 20px;
+        }
+        select {
+            //margin-top: 15px;
+            @include border-radius(25px, 25px, 25px, 25px);
+            border: 2px solid $off-blue;
+            padding: 5px 20px;
+            font-size: 22px;
+            color: $off-blue;
+            background: transparent;
+            outline: none;
+            @include appearance(none);
+            padding-right: 30px;
+        }
+        .select-with-icon {
+            margin: 0px;
+            margin-left: -50px !important;
+            position: relative;
+            z-index: 1;
+            i {
+                color: $off-blue;
+                position: absolute;
+                top: 35%;
+                right: 12px;
+                z-index: -1;
+            }
+        }
+        select::-ms-expand {
+            display: none;
+        }
+        .shadow {
+            margin: 10px 0 20px 0;
+            min-height: 160px;
+            label {
+                &:first-child {
+                    color: $off-blue;
+                    font-size: 22px;
+                }
+            }
+        }
+        .agent-notes {
+            height: auto;
+            width: 100%;
+            float: left;
+            label {
+                width: 100%;
+                padding-left: 20px;
+                color: $off-gray;
+            }
+            textarea {
+                border: 1px dashed $off-gray;
+        @include border-radius(5px, 5px, 5px, 5px);
+                margin-top: 10px;
+                padding: 20px;
+            }
+        }
+        .contract-expiration-value {
+            width: 90px;
+        }
+        .files-count {
+            margin-left: 33px;
+        }
+        .contract-expiration-value .custom_period_seleceted .user-success {
+      @include border-radius(25px, 25px, 25px, 25px);
+            border: 2px solid #455c73;
+            outline: none;
+        }
+    }
+    .editSettings {
+        #arrow {
+            z-index: 1px;
+            top: 35%;
+        }
+        select {
+            height: 45px;
+            width: 220px;
+            margin-top: -5px;
+        }
+    }
+    #agency_performance {
+        .performance-value {
+            color: $sea-green;
+            font-size: 90px;
+            font-family: 'Roboto';
+        }
+        .enrolled-students-value {
+            color: $sea-green;
+            font-size: 90px;
+            font-family: 'Roboto';
+        }
+    }
+    .agency-contract {
+        .contract-expiration-cntr {
+            margin: 35px;
+        }
+    }
+    .add-office-btn {
+        font-size: 18px;
+        margin: 15px 25px;
+        &:before {
+            content: "+";
+            margin-right: 5px;
+        }
+    }
+    .add-contract-btn {
+        font-size: 18px;
+        margin: 15px 25px;
+        &:before {
+            content: "+";
+            margin-right: 5px;
+        }
+    }
+    .save-changes-btn {
+        font-size: 24px;
+        padding: 10px 40px;
+        margin-left: 25px;
+    @include border-radius(10px, 10px, 10px, 10px);
+    }
+    .agency-cat-prem {
+        .shadow {
+            height: inherit;
+            padding: 10px 20px;
+        }
+    }
+    .custom-period {
+        input[type="text"] {
+            max-width: 180px;
+            min-width: 120px;
+      padding: 0px;
+      margin: 0px;
+            &:focus {
+                outline: none;
+            }
+        }
+    }
+    #expiration_alert_recurrence {
+        border-radius: 25px;
+        height: 45px;
+        width: 200px;
+        margin-left: 45px;
+        border: 3px solid #000;
+        background-color: transparent;
+        color: #000;
+    }
+    #agency_settings {
+        div.options {
+            margin-left: -15px;
+        }
+        label.selected {
+            border: 3px solid $black;
+            color: $black;
+        }
+        label.radio-btn-lbl {
+            color: $black;
+        }
+        .row:not(.agent-notes) {
+            margin-left: -60px;
+            label {
+                margin-left: 0px;
+            }
+            .radio-btn-lbl {
+                padding-left: 20px;
+                margin-left: 0px;
+            }
+        }
+        .agent-notes{
+            margin-left: 0px;
+        }
+        .row.shadow.agent-notes {
+            margin: auto;
+            margin-top: 15px;
+            margin-bottom: 30px;
+        }
+        .checkbox-wrapper .rounded-checkbox i {
+            position: absolute;
+            top: 16px;
+        }
+    }
+    .checkbox-wrapper {
+        position: relative;
+        height: 90px;
+        margin-right: 0px;
+        .rounded-checkbox {
+            //left: 25%;
+            h3 {
+                margin: 5px 0px;
+                word-wrap: break-word; 
+                max-width: 262px; 
+                overflow: hidden; 
+                max-height: 94px; 
+                line-height: 23px;
+                padding-left: 35px;
+            }
+            input[type=checkbox]:checked + i + h3 {
+                padding-top: 0px;
+                padding-left: 35px;
+            }
+        }
+    }
+  .add-agency-user-tab, .edit-agency-users-tab {
+        .shadow {
+            margin-bottom: 45px;
+        }
+    }
+    .edit-agency-users-tab {
+        #add_user {
+            margin-left: 25px;
+        }
+    #add_user, #show_users {
+            margin-bottom: 30px;
+        }
+    }
+    .custom-modal-content{
+         margin: 30px -135px;
+        }
+    .custom-modal-dialog{
+       margin: 30px auto;
+    }    
+    .table-striped{
+        tr:nth-child(1){
+            th{
+                border-bottom: none;
+                border-top: none;
+                color: $soft-blue;
+            }
+        }
+         tr:nth-child(2){
+            th{
+                border-bottom: none;
+                border-top: none;
+                color: $dark-red;
+            }
+        }
+    }
+    .upload-input {
+        position: absolute;
+        z-index: 2;
+        top: 0;
+        left: 15px;
+        @include opacity(0);
+        width: 108px;
+        height: 32px;
+    }
+    .upload-file-info{
+        font-size: 20px;
+        color: $off-blue;
+        font-weight: bold;
+    }    
+}
+
+.agency-page.csv-download {
+    .modal-header {
+        padding: 30px 15px;
+    }
+    .modal-body {
+        padding: 15px 20px;
+    }
+    .upload-csv-btn {
+        width: 175px;
+    }
+    .fa-info-circle {
+        margin: 2px;
+        border-radius: 50%;
+    }
+    .upload-file-info {
+        vertical-align: -6px;
+    }
+    .help-btn {
+        cursor: pointer;
+        font-size: 28px;
+        color: $soft-blue;
+        vertical-align: -6px;
+        margin: 0 10px;
+    }
+    .download-example {
+        float: left;
+        font-size: 16px;
+        margin-top: 6px;
+        color: darken($soft-blue, 10%);
+        font-weight: bold;
+    }
+    .modal-footer .btn.btn-primary{
+        width: 85px;
+    }
+}
+
+.agency-page.ranking-page {
+    .ranking-hint {
+        max-width: 800px;
+        margin: auto;
+        margin-top: 40px;
+        margin-bottom: 20px;
+        color: $off-blue;
+        text-align: left;
+        font-size: 16px;
+    }
+    .red {
+        color: red;
+        text-align: center;
+    }
+    .agency-filter{
+        position: relative;
+        left: 51%;
+    }
+    .select-style {
+        width: 22%;
+        display: inline-block;
+        background-color: $light-gray;
+        margin-left: 10px;
+    }
+    .table-container {
+        width: 60%;
+        margin: 0 auto;
+    }
+    .ranking-table {
+        width: 100%;
+        margin: auto;
+        background: $white;
+        @include border-radius(5px, 5px, 5px, 5px);
+        @include box-shadow(0px ,3px, 7px, 0px, $off-gray);
+        thead {
+            tr {
+                @include box-shadow(0px ,1px, 5px, 0px, $off-gray);
+                th {
+                    font-size: 18px;
+                    padding: 20px 5px;
+                }
+                th:first-child {
+                    width: 30%;
+                }
+            }
+        }
+        tbody {
+            tr {
+                vertical-align: top;
+                td {
+                    padding: 10px 5px;
+                    font-size: 16px;
+                  //  border-bottom: 1px solid  $red;
+                    a {
+                        text-decoration: none;
+                        color: $dark-gray;
+                        &:hover {
+                            font-weight: 600;
+                            color: $black;
+                        }
+                    }
+                }
+                td:first-child {
+                    font-weight: 600;
+                }
+            }
+            tr:last-child td{
+                border: none;
+            }  
+        }
+    }
+}

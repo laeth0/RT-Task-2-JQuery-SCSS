@@ -1,0 +1,13 @@
+.footer {
+  float: left;
+  width: 100%;
+  padding: 10px 0;
+  color: $footer;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  max-height: 60px;
+  a {
+    color: $footer;
+  }
+}

@@ -1,0 +1,58 @@
+.login-page {
+  .logo-area {
+    background: url('../images/ixu-logo.png') center center no-repeat;
+    width: 66px;
+    height: 84px;
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  .agent-title {
+    color: $blue;
+    font-size: 2.5em;
+  }
+  .agent-subtitle {
+    color: $off-blue;
+    font-size: 1.5em
+  }
+  .login-form {
+    background: $light-gray;
+    padding: 45px;
+    button {
+      width: 100%;
+    }
+    .file-upload label.btn {
+        position: relative;
+        input[type="file"][name="school_image"] {
+        @include opacity(0);
+        width: 150px;
+        position: absolute;
+        top: 0px;
+        left: 0px;
+      }
+    }
+  }
+}
+
+.dashboard-list {
+  .dashboard {
+    min-height: 270px;
+    .thumbnail {
+      border: 0;
+      a {
+        text-decoration: none;
+        border: none;
+        h4 {
+          color: #455c73;
+          line-height: 22px;
+          font-size: 1.5em;
+        }
+      }
+    }
+    .thumbnail.disabled {
+      @include opacity(0.5);
+      & > a {
+        cursor: not-allowed;
+      }
+    }
+  }
+}

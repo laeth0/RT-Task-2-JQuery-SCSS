@@ -1,0 +1,31 @@
+<?php
+
+return [
+
+    'added_successfully' => 'Added Successfully',
+    'updated_successfully' => 'Updated successfully',
+    'error' => 'An error has occurred...',
+    'userError' => 'User does not exist..',
+    'deleteUserError' => 'The User who you try to delete does not exist..',
+    'delete_user_confirmation' => 'Are you sure you want to delete this user?',
+    'delete_conversation_confirmation' => 'Are you sure you want to delete this conversation?',
+    'missing_video_file_error' => 'The video file field is required.',
+    'addingerror' => 'You must add video file or embed video...',
+    'addingerror2' => 'You can not add both video file and embed video...',
+    'deleted_successfully' => 'Deleted successfully',
+    'delete' => 'Delete',
+    'cancel' => 'Cancel',
+    'save_changes' => 'Save changes',
+    'save' => 'Save',
+    'update' => 'Update',
+    'edit' => 'Edit',
+    'title_is_required' => 'The title field is required',
+    'student_name_is_required' => 'Student name is required',
+    'ok' => 'Ok',
+    'amount_paid_is_required' => 'Amount Paid is required',
+    'search' => 'Search',
+    'start_date' => 'Start Date',
+    'end_date' => 'End Date',
+    'from_address' => 'From Address',
+    'to_address' => 'To Address',
+    ];

@@ -1,0 +1,65 @@
+.profile {
+  .container {
+    .algin-view {
+      text-align: center;
+      .fileUpload {
+        margin-top: 30px;
+        height: 160px;
+        font-size: 8em;
+        .upload {
+          height: 160px;
+        }
+        .upload-image {
+          background: url('../images/agency/upload-image.png') no-repeat center center;
+          background-size: contain;
+          float: left;
+          width: 150px;
+          height: 150px;
+          position: relative;
+          overflow: hidden;
+          border-radius: 50%;
+        }
+        img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          display: inline;
+          margin: 0 auto;
+          height: 100%;
+          width: 100%;
+        }
+      }
+    }
+    .profile_section {
+
+      .main-frofile {
+
+        color: $dark-gray;
+        font-size: 22px;
+        i {
+          font-size: 15px;
+          float: left;
+          margin-top: 10px;
+        }
+        label {
+          padding-left: 0px;
+          color: $dark-gray;
+          font-size: 22px;
+          padding-top: 0;
+          margin-top: 0;
+        }
+        .email-add {
+
+        }
+      }
+    }
+    .form-devider {
+      border-color: $off-blue-gray;
+      margin: 30px -15px;
+    }
+  }
+  input[type="text"]
+  {
+        width: 105%;
+  }
+}

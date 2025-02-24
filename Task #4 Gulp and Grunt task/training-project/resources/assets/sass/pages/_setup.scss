@@ -1,0 +1,162 @@
+.setup {
+  .shadow {
+    padding: 0px;
+    margin-bottom: 60px;
+    .row {
+      padding: 10px 0px;
+      margin-left: 20px;
+      padding: 10px;
+
+      button {
+        margin: 50px 0px;
+        font-size: 16px;
+      }
+    }
+    label {
+      font-weight: normal;
+      color: $off-blue-gray;
+      font-size: 18px;
+      padding-top: 5px;
+      margin-top: 7px;
+    }
+    input[type="text"] {
+      padding: 10px 5px;
+      font-size: 22px;
+      color: $dark-gray;
+      margin-top: 5px;
+      background: none;
+      box-shadow: none;
+      width: 60%;
+    }
+    textarea {
+      padding: 10px 5px;
+      font-size: 22px;
+      color: $dark-gray;
+      border: 1px dashed #b8c4d1;
+      background: none;
+      box-shadow: none;
+      height: 140px;
+    }
+    img {
+      width: 100px;
+      height: 100px;
+      margin: 20px 0px;
+    }
+    h4 {
+      padding: 50px 0px;
+      font-weight: bold;
+      font-size: 20px;
+    }
+  }
+  .file-upload {
+    position: relative;
+    margin-top: 14px;
+    .btn {
+      position: relative;
+    }
+    .upload-input {
+      position: absolute;
+      z-index: 2;
+      top: 0;
+      right: 0px;
+      filter: alpha(opacity=0);
+      width: 107px;
+      height: 33px;
+      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+      opacity: 0;
+      background-color: transparent;
+      color: transparent;
+    }
+    .upload-input-lg {
+      position: absolute;
+      z-index: 2;
+      top: 0;
+      right: 0px;
+      filter: alpha(opacity=0);
+      width: 303px;
+      height: 33px;
+      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+      opacity: 0;
+      background-color: transparent;
+      color: transparent;
+    }
+    .file-name {
+      color: $dark-gray;
+      font-size: 16px;
+      text-decoration: underline;
+    }
+  }
+  .modal-body {
+    height: 80px;
+  }
+
+  .green-gradient {
+    @include linear-gradient(top, $sea-green, lighten($off-green, 15%));
+    @include border-radius(5px, 0, 0, 5px);
+  }
+  .blue-gradient {
+    @include linear-gradient(top, $blue-g-start, lighten($blue-g-end, 3%));
+    @include border-radius(5px, 0, 0, 5px);
+  }
+  .purple-gradient {
+    @include linear-gradient(top, darken($purple-g-start, 2%), lighten($purple-g-end, 1%));
+    @include border-radius(5px, 0, 0, 5px);
+  }
+  .orange-gradient {
+    @include linear-gradient(top, $orange-g-start, $orange-g-end);
+    @include border-radius(5px, 0, 0, 5px);
+  }
+
+  select {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    border: 0;
+    background: none;
+    outline: none;
+    font-size: 20px;
+    padding: 8px 5px;
+  }
+  // pseudo-element for the dropdown arrow on IE
+  select::-ms-expand {
+    display: none;
+  }
+  .select-with-icon {
+    z-index: 1;
+    select {
+      padding-right: 20px;
+      background: transparent;
+      min-width: 80px
+    }
+    position: relative;
+    i {
+      position: absolute;
+      top: 41%;
+      right: 12px;
+      z-index: -1;
+
+    }
+  }
+  .fileUpload {
+    cursor: default;
+    .upload-image {
+      background: url('../images/agency/upload-image.png') no-repeat center center;
+      background-size: contain;
+      float: left;
+      width: 100px;
+      height: 100px;
+      position: relative;
+      overflow: hidden;
+      border-radius: 50%;
+    }
+    img {
+      display: inline;
+      margin: 0 auto;
+      height: 100%;
+      width: 100%;
+    }
+  }
+  input[type="submit"][value="Save"] {
+    padding: 5px 35px;
+  }
+}

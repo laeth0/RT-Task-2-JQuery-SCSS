@@ -1,0 +1,266 @@
+.invoicesPDF {
+  .bg-white {
+    .container {
+      background: lighten($off-gray, 12%);
+
+      height: 200px;
+      .logo-container {
+        text-align: center;
+        position: relative;
+        min-height: 100px;
+        margin-top: 40px;
+        img {
+          padding-top: 20px;
+          position: fixed;
+          right: 50%;
+          width: 100px;
+          height: 100px;
+        }
+      }
+      h3 {
+        text-align: center;
+        color: $blue;
+        padding-top: 130px;
+        position: fixed;
+        right: 12%;
+      }
+      h4 {
+        text-align: center;
+        color: $blue;
+        padding-top: 125px;
+        position: fixed;
+        right: 12%;
+      }
+    }
+  }
+  .bg-gray-invoice {
+
+    background: $light-gray;
+    padding: 0px;
+    .container {
+      background: $white;
+      @include border-radius(0, 8px, 8px, 0);
+      padding: 0px;
+      .row {
+        margin: 0px;
+        /* .total-invoice{
+            text-align: right;
+        } */
+      }
+      .bottom-horizontal-line {
+        padding: 20px 20px;
+        border-bottom: 4px solid $light-gray;
+
+        .RECEIVED {
+
+          color: $white;
+          background: $off-blue;
+          line-height: 25px;
+          width: 180px;
+          height: 30px;
+          border: 1px solid $black;
+          @include border-radius(4px, 4px, 4px, 4px);
+          text-align: center;
+        }
+        .IN-PROCESS {
+          color: $white;
+          background: $orange-g-end;
+          line-height: 25px;
+          width: 180px;
+          height: 30px;
+          border: 1px solid $black;
+          @include border-radius(4px, 4px, 4px, 4px);
+          text-align: center;
+        }
+        .PAID {
+          color: $white;
+          background: $sea-green;
+          line-height: 25px;
+          width: 180px;
+          height: 30px;
+          border: 1px solid $black;
+          @include border-radius(4px, 4px, 4px, 4px);
+          text-align: center;
+        }
+
+      }
+      .d-bottom-h-line {
+        padding: 20px 50px;
+        border-bottom: 8px solid $light-gray;
+      }
+      .top-bottom-h-line {
+        padding: 20px 50px;
+        border-top: 8px solid $light-gray;
+        border-bottom: 4px solid $light-gray;
+
+      }
+      .with-no-h-line {
+        padding: 20px 40px;
+      }
+      .basic-info {
+        img {
+          width: 100px;
+          height: 100px;
+          margin-top: 10px;
+        }
+        h3 {
+          label {
+            font-size: 30px;
+            font-weight: 100;
+            color: $blue;
+          }
+        }
+        input {
+          font-size: 24px;
+          margin: 5px 0px;
+          margin-top: 12px;
+        }
+      }
+      label {
+        font-size: 18px;
+        font-weight: 100;
+        line-height: 24px;
+      }
+      input {
+        border: 0px;
+        font-size: 18px;
+      }
+
+      div[class^="col-"] {
+        padding: 0px;
+        margin: 1px 0px;
+      }
+      .input-col-wrapper {
+        position: fixed;
+        right: 0;
+        width: 300px;
+        padding-top: 230px;
+        label {
+          margin-bottom: 0px;
+        }
+      }
+      .table-wrapper {
+        min-height: 300px;
+        padding-top: 10px;
+      }
+      table {
+        table-layout: fixed;
+        width: 100%;
+        padding: 0 50px;
+        thead {
+          tr {
+            border-bottom: 4px solid $light-gray;
+            th {
+              font-size: 18px;
+              padding: 10px 5px;
+              input[type="text"] {
+                font-size: 20px !important;
+                font-weight: 100;
+                line-height: 24px;
+              }
+            }
+            th.th-extended {
+              width: 30% !important;
+              padding: 20 0px;
+            }
+
+            th:first-child {
+
+              padding-left: 10px;
+              width: 19%;
+
+            }
+            th:nth-child(3) {
+              white-space: nowrap;
+              width: 15%;
+            }
+            th:nth-child(4) {
+              white-space: nowrap;
+              width: 20%;
+            }
+            .hiddin-th {
+              height: 0px;
+              padding: 0px;
+              margin: 0px;
+              width: 0px;
+            }
+          }
+        }
+        tbody {
+          tr {
+            vertical-align: top;
+            td {
+              padding: 10px 5px;
+            }
+            td.hidden-cell {
+              padding: 0px;
+            }
+            .empty-cell {
+              min-width: 65px;
+            }
+            td:first-child {
+              white-space: nowrap;
+              padding-left: 50px;
+            }
+          }
+          //tr end
+        }
+
+        input {
+          max-width: 100%;
+        }
+        input[type="text"], input[type="number"] {
+          max-width: 80%;
+        }
+      }
+      output {
+        font-size: 18px;
+        padding: 0px;
+      }
+      .bold {
+        font-size: 20px;
+        font-weight: 600;
+        padding: 12px 0px;
+      }
+      .add-padding {
+        padding-top: 20px;
+        padding-bottom: 30px;
+      }
+
+      .total-invoice-margin {
+        margin: -10px 0px;
+
+      }
+      .center-parent {
+        position: relative;
+      }
+      .center {
+        @include centerer(true, false);
+      }
+      #small-font-size {
+        font-size: 12px;
+      }
+      input:disabled {
+        background: $white;
+      }
+      .file-upload {
+        margin-top: 12px;
+        position: relative;
+      }
+      .upload-input {
+        position: absolute;
+        z-index: 2;
+        top: 0;
+        left: 15px;
+        @include opacity(0);
+        width: 108px;
+        height: 32px;
+      }
+    }
+    //end of container
+  }
+  .add-margin {
+    margin: 30px 0px;
+  }
+
+}

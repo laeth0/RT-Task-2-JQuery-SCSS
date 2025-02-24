@@ -1,0 +1,66 @@
+.home-page {
+  .container {
+    padding: 0px 50px;
+    .school, .agency {
+      width: 50%;
+      padding: 0px 5%;
+      margin-top: 95px;
+      text-align: center;
+      img {
+        width: 50%;
+        max-width: 240px;
+        height: 161px;
+        margin-bottom: 35px;
+      }
+      h2 {
+        text-align: left;
+        margin-bottom: 12px;
+      }
+      input[type="email"] {
+        margin-bottom: 25px;
+        height: 40px;
+      }
+      input[type="password"] {
+        margin-bottom: 5px;
+        height: 40px;
+      }
+      a {
+        margin-bottom: 20px;
+        clear: left;
+      }
+      .remeber-me-label {
+        display: block;
+        clear: left;
+        float: left;
+        cursor: pointer;
+        margin-bottom: 12px;
+        line-height: 32px;
+        position: relative;
+        padding-left: 20px;
+        input[type="checkbox"] {
+          position: absolute;
+          bottom: 10px;
+          left: 0;
+          cursor: pointer;
+        }
+      }
+      .form-actions 
+      {
+        .btn {
+          margin-bottom: 60px;
+          height: 40px;
+        }
+      }
+    }
+    .school {
+      float: right;
+      border-left: 1px solid $light-gray;
+    }
+    .agency {
+      float: left;
+      border-right: 1px solid $light-gray;
+    }
+  }
+}
+
+  

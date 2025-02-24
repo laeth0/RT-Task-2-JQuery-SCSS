@@ -1,0 +1,111 @@
+.report-center-schoolPDF {
+  background-color: $white !important;
+  .bg-grayPDF {
+    .containerPDF {
+      min-height: 850px;
+
+      .shadow-wrapperPDF {
+        position: fixed;
+        margin: 60px 40px;
+        .rowPDF {
+          .report-header{
+            position: fixed;
+            left: 300px;
+            padding-top: 60px;
+          }
+          .school-logo{
+            text-align: center;
+            position: relative;
+            min-height: 60px;
+            margin-top: 40px;
+            img {
+              position: fixed;
+              padding-top: 60px;
+              left: 40px;
+              width: 60px;
+              height: 60px;
+            }
+          }
+        }
+        .table-wrapper {
+          min-height: 500px;
+        }
+        table {
+          table-layout: fixed;
+          width: 100%;
+          padding: 80 5px;
+          thead {
+            tr {
+              border-bottom: 3px solid $light-gray;
+              margin-bottom: 10px;
+              th {
+                font-size: 18px;
+                padding: 10px 5px;
+                label {
+                  margin: 0px 0px 0px 55px;
+                  font-weight: 100;
+                }
+              }
+              th.cell-width {
+                width: 25%;
+              }
+              th:first-child {
+                white-space: nowrap;
+                width: 25%;
+              }
+            }
+          }
+          tbody {
+            tr {
+              text-align: center;
+              vertical-align: top;
+              td {
+                padding: 10px 5px;
+                font-size: 22px;
+                label {
+                  font-size: 18px;
+                  font-weight: 100;
+                }
+                a {
+                  cursor: pointer;
+                }
+              }
+              td.cell-width {
+                width: 25%;
+              }
+              td:first-child {
+                white-space: nowrap;
+                width: 25%;
+              }
+              td.no-padding {
+                padding-left: 5px;
+              }
+              .paid {
+                color: $sea-green;
+              }
+              .outstanding {
+                color: $orange;
+              }
+              .increased {
+                color: $sea-green;
+              }
+              .decreased {
+                color: $dark-red;
+              }
+              .expired {
+                color: $dark-red;
+              }
+            }
+            //tr end
+            tr:first-child {
+              label {
+                margin-top: 40px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+

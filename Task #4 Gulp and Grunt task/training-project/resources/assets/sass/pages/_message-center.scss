@@ -1,0 +1,742 @@
+.message-center {
+    .container {
+        padding: 0 50px;
+    }
+    .modal-content {
+      .modal-header {
+        @include linear-gradient(top, $blue-g-start, $blue-g-end);
+        color: $white;
+        padding: 25px 25px 40px 35px;
+        height: 80px;
+      }
+      .modal-body {
+        padding: 0px;
+        .header-row {
+          padding: 40px 0px 40px 0px !important;
+          height: 112px !important;
+          .sortby-lbl, .sendto-lbl {
+            margin: 0px;
+          }
+          .sortby-panel, .sendto-panel {
+            display: inline-block;
+            position: relative;
+            .sortby-btn, .sendto-btn {
+              height: 30px;
+            }
+          }
+          .sortby-menu, .sendto-menu {
+            left: 0;
+          }
+        }
+        .row {
+            height: 95px;
+          margin: 0px;
+          padding: 25px 25px 25px 35px;
+          border-bottom: 1px solid $off-gray;
+          .btn {
+            background-color: $gray-btn;
+            color: #586b7f;
+            padding: 4px 30px;
+          }
+          label {
+            padding-left: 10px;
+            padding-right: 10px;
+          }
+          .info {
+            width: 100%;
+            display: inline-block;
+            padding-left: 10px;
+            div {
+              display: inline-block;
+            }
+
+            img {
+              background: url('../images/agency/upload-image.png') no-repeat center center;
+              float: left;
+              padding: 0px 5px;
+            }
+            h4 {
+              margin: 0px;
+              padding: 5px;
+              float: left;
+            }
+            h5 {
+              margin: 0px;
+              padding: 5px;
+              float: left;
+              clear: left;
+              color: $off-gray;
+              font-size: 18px;
+            }
+          }
+        }
+        .checkbox-wrapper {
+          float: right;
+        }
+      }
+      .modal-footer {
+        padding: 40px;
+        text-align: left;
+        border: 0px;
+        .btn-primary {
+          width: 150px;
+        }
+        .cancel-btn {
+            background-color: darken($gray-btn,20%);
+        }
+        .btn {
+            font-size: 18px;
+            color: $white;
+        }
+      }
+    }
+
+    #calendar {
+        .modal-body .row {
+            height: 150px;
+        }
+        .modal-footer .btn-primary.sendDate {
+            min-width: 190px;
+        }
+        .modal-header {
+            @include linear-gradient(right, $purple-g-end, $purple-g-start);
+        }
+    }
+
+    .ec-bar {
+        margin-right: -65px;
+        margin-left: -65px;
+        border-top: 2px solid $light-gray;
+        div {
+            padding: 0px;
+        }
+        .ec-label :last-child {
+            border-left: 0;
+        }
+         .ec-label {
+            width: 100%;
+            height: 125px;
+
+            border-left: 2px solid $light-gray;
+            border-right: 2px solid $light-gray;
+            text-align: center;
+            cursor: pointer;
+            img {
+                width: 45px;
+                height: 40px;
+                display: inline-block;
+                margin-top: 30px;
+            }
+            .send-icon {
+                width: 80px;
+            }
+            button, span {
+                background: none;
+                border: none;
+                margin-top: 10px;
+                display: inline-block;
+                color: $off-blue;
+                font-size: 16px;
+                outline: none;
+            }
+        }
+    }
+
+    #allAgentModal .modal-content .modal-body .row {
+        padding: 8px 25px 25px 35px;
+    }
+
+    .user-name {
+        width: 77%;
+        position: relative;
+        top: -13px;
+        margin-left: 37px;
+        color: $off-blue !important;
+    }
+    
+    .subject-lbl, .attach-lbl {
+        color: $off-blue;
+        font-size: 18px;
+    }
+    .subject-lbl {
+        margin-top: 8px;
+    }
+    .attach-lbl {
+        margin-top: 12px;
+    }
+    .end-lbl {
+        margin-left: -5px;
+    }
+    .search-input {
+        margin-left: 4px;
+    }
+    .sendSms {
+        margin-left: -25px;
+        margin-top: -20px;
+    }
+    .to-input {
+        margin-left: -30px;
+        width: 104%;
+    }
+    #to_address {
+        margin-left: 0px;
+        width: 101%;
+    }
+    .subject-input {
+        margin-left: -40px;
+        width: 108%;
+    }
+    .btn-default {
+        background-color: #bdc8d4;
+    }
+    .btn {
+        background-color: $gray-btn;
+        color: $off-blue;
+    }
+    .to-person-msg {
+        margin-left: 80px;
+        margin-top: -10px;
+    }
+    .btn.all_agents {
+        min-width: 160px;
+        background-color: #bdc8d4;
+        border-color: #bdc8d4;
+        margin-left: -20px;
+        span {
+            color: $white;
+            font-weight: bold;
+            letter-spacing: 1px;
+            font-size: 18px;
+        }
+    }
+    input {
+        background: #e8ebef;
+        color: $off-blue-gray;
+        padding: 10px;
+        border: 0;
+        box-shadow: none;
+        @include border-radius(3px,3px,3px,3px);
+        font-size: 16px;
+        font-style: italic;
+    }
+
+    input[type='text'] {
+        height: 37px;
+    }
+
+    .btn-primary {
+        background-color: #498af3;
+        color: $white;
+        width: 100px;
+    }
+    
+    #allAgentModal {
+        label {
+            padding-top: 20px;
+        }
+    }
+
+    #email_center > div.row.emailPanel > div > div.col-xs-8.col-sm-10 > div:nth-child(1) > div > div > div {
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+
+    #email_center > div.row.emailPanel > div > div.col-xs-8.col-sm-10 > div:nth-child(1) > div > div > div:nth-child(9), #email_center > div.row.emailPanel > div > div.col-xs-8.col-sm-10 > div:nth-child(1) > div > div > div:nth-child(11), #email_center > div.row.emailPanel > div > div.col-xs-8.col-sm-10 > div:nth-child(1) > div > div > div:nth-child(12), #email_center > div.row.emailPanel > div > div.col-xs-8.col-sm-10 > div:nth-child(1) > div > div > div:nth-child(13), #email_center > div.row.emailPanel > div > div.col-xs-8.col-sm-10 > div:nth-child(1) > div > div > div:nth-child(14), #email_center > div.row.emailPanel > div > div.col-xs-8.col-sm-10 > div:nth-child(1) > div > div > div:nth-child(15), #email_center > div.row.emailPanel > div > div.col-xs-8.col-sm-10 > div:nth-child(1) > div > div > div:nth-child(16), #email_center > div.row.emailPanel > div > div.col-xs-8.col-sm-10 > div:nth-child(1) > div > div > div:nth-child(19), #email_center > div.row.emailPanel > div > div.col-xs-8.col-sm-10 > div:nth-child(1) > div > div > div:nth-child(20), #email_center > div.row.emailPanel > div > div.col-xs-8.col-sm-10 > div:nth-child(1) > div > div > div:nth-child(21) {
+        display: none;
+    }
+
+    #email_center > div.row.emailPanel > div > div.col-xs-8.col-sm-10 > div {
+/*        border: none !important;
+        border-left-color: $white !important;
+        height: 100px;
+        background-color: $white;
+        box-shadow: 4px 5px 15px #888880;*/
+    }
+
+    .bg-gray {
+        min-height: 900px;
+        padding-top: 40px;
+        padding-bottom: 50px;
+        hr {
+            width: 130%;
+            margin-left: -80px;
+        }
+        .row {
+            table {
+                background: $white;
+                font-size: 18px;
+            }
+        }
+    }
+
+    #sms {
+        border: none;
+        border-radius: 0;
+        width: 103%;
+        margin-left: -20px;
+        min-height: 245px;
+        .upload-image {
+            background: url('../images/agency/upload-image.png') no-repeat center center;
+            background-size: contain;
+            float: right;
+            width: 60px;
+            height: 60px;
+            position: relative;
+            overflow: hidden;
+            border-radius: 50%;
+        }
+        img {
+            display: inline;
+            margin: 0 auto;
+            height: 100%;
+            width: 100%;
+        }
+    }
+
+    .message-center>.container>.row>.col-xs-12>.pull-left, .dashborads-menu>span {
+        position: relative;
+        left: -10px;
+    }
+
+    .message-center>.container>.nav, .nav-tabs>hr {
+        margin-left: -100px;
+        margin-right: -50px;
+        margin-bottom: 0px;
+    }
+
+    .person-img-pos {
+        margin-top: -30px;
+        margin-left: 40px;
+    }
+
+    .message-center>.container>.nav, .nav-tabs {
+        margin-left: 18px;
+    }
+
+    .row>.col-xs-8.col-sm-12>.btn-primary>span {
+        font-weight: 600;
+        font-size: 18px;
+    }
+    .mce-ico, .mce-i-undo, .mce-txt, #mceu_2-open, .mce-caret {
+        color: white;
+    }
+    .emailPanel .mce-ico, .mce-i-undo, .mce-txt, #mceu_2-open, .mce-caret {
+        color: #333333;
+    }
+    #mceu_13>#mceu_13-body>#mceu_14>#mceu_14-body, #mceu_13>#mceu_13-body>#mceu_28>#mceu_28-body {
+        display: none;
+    }
+    #mceu_13>#mceu_13-body>#mceu_19, #mceu_13>#mceu_13-body>#mceu_19 {
+        min-height: 60px;
+        padding-top: 40px;
+        padding-left: 150px;
+        font-size: 20px;
+        border: none;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+    #mceu_13>#mceu_13-body>#mceu_27 {
+        box-shadow: 1px 17px 28px lightgray;
+    }
+    #mceu_13>#mceu_13-body>#mceu_27>#msgArea_ifr {
+        border-bottom-left-radius: 10px;
+        min-height: 400px;
+    }
+    textarea[name="sms_message"] {
+        border: none;
+    }
+    #mceu_13>#mceu_13-body>#mceu_19, #mceu_13>#mceu_13-body>#mceu_19>#mceu_19-body>#mceu_20>#mceu_20-body>#mceu_21>#mceu_21-body>#mceu_0, #mceu_1, #mceu_13>#mceu_13-body>#mceu_19>#mceu_19-body>#mceu_20>#mceu_20-body>#mceu_22>#mceu_22-body>#mceu_2, #mceu_13>#mceu_13-body>#mceu_19>#mceu_19-body>#mceu_20>#mceu_20-body>#mceu_23>#mceu_23-body>#mceu_3, #mceu_4, #mceu_13>#mceu_13-body>#mceu_19>#mceu_19-body>#mceu_20>#mceu_20-body>#mceu_24>#mceu_24-body>#mceu_5, #mceu_6, #mceu_7, #mceu_8, #mceu_13>#mceu_13-body>#mceu_19>#mceu_19-body>#mceu_20>#mceu_20-body>#mceu_25>#mceu_25-body>#mceu_9, #mceu_10, #mceu_11, #mceu_12 {
+        background-color: #384053;
+    }
+    .emailPanel #mceu_13>#mceu_13-body>#mceu_19, #mceu_13>#mceu_13-body>#mceu_19>#mceu_19-body>#mceu_20>#mceu_20-body>#mceu_21>#mceu_21-body>#mceu_0, #mceu_1, #mceu_13>#mceu_13-body>#mceu_19>#mceu_19-body>#mceu_20>#mceu_20-body>#mceu_22>#mceu_22-body>#mceu_2, #mceu_13>#mceu_13-body>#mceu_19>#mceu_19-body>#mceu_20>#mceu_20-body>#mceu_23>#mceu_23-body>#mceu_3, #mceu_4, #mceu_13>#mceu_13-body>#mceu_19>#mceu_19-body>#mceu_20>#mceu_20-body>#mceu_24>#mceu_24-body>#mceu_5, #mceu_6, #mceu_7, #mceu_8, #mceu_13>#mceu_13-body>#mceu_19>#mceu_19-body>#mceu_20>#mceu_20-body>#mceu_25>#mceu_25-body>#mceu_9, #mceu_10, #mceu_11, #mceu_12 {
+        background-color: #f0f0f0;
+    }
+    #mceu_13>#mceu_13-body>#mceu_19>#mceu_19-body>#mceu_20>#mceu_20-body>#mceu_22, #mceu_13>#mceu_13-body>#mceu_19>#mceu_19-body>#mceu_20>#mceu_20-body>#mceu_23, #mceu_13>#mceu_13-body>#mceu_19>#mceu_19-body>#mceu_20>#mceu_20-body>#mceu_24, #mceu_13>#mceu_13-body>#mceu_19>#mceu_19-body>#mceu_20>#mceu_20-body>#mceu_25 {
+        border-left: none;
+    }
+    .fileUpload input.upload {
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 0;
+        padding: 0;
+        font-size: 20px;
+        cursor: pointer;
+        opacity: 0;
+        filter: alpha(opacity=0);
+    }
+    .fileUpload.btn.btn-primary {
+        position: relative;
+        overflow: hidden;
+        margin-left: -22px;
+    }
+    #sendLater {
+        padding: 5px;
+    }
+    .log-lbl {
+        color: $off-blue !important;
+    }
+    .special-modal-dialog {
+        margin: 30px -42px;
+    }
+    .special-modal-title {
+        font-weight: bold;
+    }
+    .special-row {
+        width: 52%;
+        border-bottom: 1px solid $tap-gray;
+        padding: 15px 0px;
+    }
+    .last-modal-log-row {
+        width: 52%;
+        padding-top: 15px;
+    }
+    .rounded-checkbox {
+        i {
+          padding: 0px 1px 0px 2px;
+        }
+    }
+    .chatting-tab {
+        .chat-IUX{
+            
+    // background:$orange;
+
+                ::-webkit-scrollbar {
+                    width: 8px;
+                }
+                 
+                /* Track */
+                ::-webkit-scrollbar-track {
+                    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+                    -webkit-border-radius: 10px;
+                    border-radius: 10px;
+                }
+                 
+                /* Handle */
+                ::-webkit-scrollbar-thumb {
+                    -webkit-border-radius: 10px;
+                    border-radius: 10px;
+                    background: white; 
+                    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+                }
+                ::-webkit-scrollbar-thumb:window-inactive {
+                    background: $light-gray; 
+                }
+
+
+
+    .h-max{
+        height: 600px;
+        color:$dark-gray;
+    }
+
+    .w-max{
+        width: 100%
+    }
+    .round-img{
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        // border:2px solid white;
+    }
+
+    .right-border{
+        border-right: 10px solid $white;
+    }
+    .contacts-header
+    {   
+        position : relative;
+        background-color: $header-chat-color;
+        height: 105px;
+            .mo{
+        padding-top: 4%;
+                }
+
+        img{
+        margin-top: 2%;
+        margin-left: 1%;
+        margin-bottom: 2%;
+        float: left;
+        
+            }
+    
+        p
+        {   margin-left:80px;
+            padding-top: 5%;
+            color:white;
+        }
+        hr{
+            width: 70%; 
+            padding-left:20px;
+        }
+        a{  
+            color: white;
+            text-decoration: none;
+            padding-top:5%;
+            float: right;
+            padding-right:15px;
+            &:hover{
+                color:$orange;
+                cursor: pointer;
+
+            }
+            i{
+                padding-right:5px;
+            }
+
+            // .search-f{
+            //  width: 100%;
+            // }
+
+        }   // end of a 
+
+        .drop-d{
+            float:right;
+            margin-top: -55px;
+            // i{ padding-top: -110px;}
+            ul{
+                // padding-right : 400px;
+                left: -160px;
+                top:10px;
+                    a{color:black;}
+            }
+        
+            
+        }
+        .search-f{
+            position : absolute;
+            left: 50px;
+            bottom : 2px;
+            margin-bottom: 10px;
+            input{
+                background-color:$chat-body;
+                height: 40px;
+                width: 100%;
+            }
+            // text-align: center;
+        }
+    } // contacts header
+
+.contacts{
+        background:$chat-body;
+        width: 100%;
+        height: 500px;
+        overflow-y:scroll;
+        overflow-x:hidden;
+         a{
+            text-decoration: none;
+                min-height: 60px;
+            div.contact-list
+            {
+                &:hover
+                {   
+                    background-color : white 0.5;
+                        border-left: 10px solid $chat-body ;
+                }
+            }
+          }
+        .contact-list{
+            // padding-top:20px;
+            // padding-left : 20px;
+            min-height: 50px;
+            
+            img{
+                margin-left:3px;
+                margin-bottom: 3px;
+                
+            }
+            .round-img{
+                    border-radius: 50%;
+                    width: 50px;
+                    height: 50px;
+                    // border:2px solid $light-gray;
+                }
+                hr{
+                      border: 0 none;
+                      border-top: 1px dashed $gray;
+                      background: none;
+                      height:0;
+                      margin-left: -66px;
+                    
+                }
+                b{
+                    color:$header-chat-color;
+                    font-weight: 501;
+                     letter-spacing: 0.5px;
+
+
+                }
+                p{
+                    color: $gray;
+                }
+                small{
+                    float:right;
+                    color: $gray;
+                }
+                span{
+                 float :right ;
+                 font-weight: 100;
+                 margin-right:: -70px;
+                 margin-top: 15px;
+                }   
+            }
+        }   
+        #modal_contacts{
+        .modal-content{
+            width: 350px;
+            .modal-header{
+                background:$header-chat-color;
+             .close{
+                opacity: 1;
+                text-shadow: none;
+                color:white;
+             }
+                h4{
+                    color:$white;
+                        }
+            }
+            .new-contact{
+                background:$chat-body;
+                overflow-y: scroll;
+                overflow-x: hidden;
+                max-height: 400px;
+
+                .row{
+
+                    a{   
+                     width: 348px;
+                     // background-color:$light-gray;
+                     margin-left:4px;
+                     margin-right: 0;
+                     p{
+                     color:$header-chat-color;
+                     }
+                    }
+                    
+                }
+                hr{
+                    margin-top: 0;
+                    margin-top: 0;
+                    text-align: center;
+                    border: 0 none;
+                    border-top: 1px dashed $gray;
+                    //background: none;
+                    height:0;
+                    margin-left: 41px;
+                }
+            }
+        }
+    }
+        
+        
+
+
+
+    .inbox-body{
+        position : relative;
+        width: 100%;
+        height: 500px;
+        background-color: $chat-body;
+        border-radius : 8px;
+
+        .messages-area
+        {   
+            width: 100%;
+            position :absolute;
+            overflow-y: scroll;
+            overflow-x:hidden;
+            height: 82%;
+            max-height: 82%;
+            
+            small{
+                float:right;
+            }
+            .received-msg{
+                
+                position : relative;
+                border-radius : 20px;
+                float: left;
+                padding : 8px;
+                margin: 10px 0 10px 5px ;
+                min-width: 60%;
+                width: 60%;
+                min-height: 10%;
+                background-color : $light-gray;
+                
+            }
+            .sent-msg{
+                position : relative;
+                float: right ;
+                border-radius : 20px;
+                margin: 10px 5px 10px 0px ;
+                padding: 8px;   
+                min-width: 60%;
+                width: 60%;
+                min-height: 10%;
+                background-color : $sender-color;
+            }
+
+
+        }
+
+        .sending-area{
+            position: absolute;
+            bottom: 0;
+            margin-bottom: 0;
+            margin-top: 45%;
+            width: 100%;
+            height: 90px;
+            max-height: 90px;
+            border-radius: 8px;
+            // background-color:$header-chat-color;
+
+            .textarea{
+
+                position : absolute;
+                width: 100%;
+                height: 112%;
+                border-radius : 8px;
+                
+                textarea{
+                width: 100%;
+                height: 90%;
+                padding : 10px;
+                  border-bottom: 5px solid $header-chat-color;
+                   border-top: 5px solid $header-chat-color;
+                   border-left : 3px solid $header-chat-color;
+                   border-right : 3px solid $header-chat-color;
+                 // margin : 5px 0px 2px 0px ; 
+                resize: none;
+                border-bottom-left-radius : 8px;
+                border-bottom-right-radius : 8px;
+                overflow: auto;
+                outline: none;
+                -webkit-box-shadow: none;
+                -moz-box-shadow: none;
+                box-shadow: none;
+            }
+            }
+        }
+    }
+
+}
+    }
+    #formLog {
+        label {
+            font-size: 18px;
+            color: $off-blue;
+            margin-bottom: 0;
+            margin-top: 10px;
+        }
+    }
+    .sms-tracking {
+        margin-bottom: 20px;
+        label {
+            font-size: 16px;
+            color: $off-blue;
+        }
+    }
+}
+.hide-labels {
+    display: none;
+}

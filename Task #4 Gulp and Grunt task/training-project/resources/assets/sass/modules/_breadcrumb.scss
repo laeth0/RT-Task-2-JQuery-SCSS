@@ -1,0 +1,22 @@
+.breadcrumb {
+  background: none;
+  border-radius: 0;
+  margin-left: 18px;
+  & > li {
+    font-size: 20px;
+    a {
+      color: $off-gray;
+      text-decoration: none;
+    }
+    &.active {
+      color: $off-blue;
+      &:before{
+        color: $off-blue;
+      }
+    }
+    & + li:before {
+      content: "\25cf";
+      color: $off-gray;
+    }
+  }
+} 

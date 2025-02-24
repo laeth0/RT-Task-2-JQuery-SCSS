@@ -1,0 +1,195 @@
+ label.error {
+	color: $error-color !important;
+	font-size: 16px !important;
+	margin-top: 4px;
+	display: block;
+	font-weight: normal !important;
+}
+@media (min-width:767px) {
+	#officeModalForm{
+		label.error{
+			margin-left: 33%;
+		}
+	}
+}
+input.error {
+	border: 1px solid $error-color !important;
+}
+
+textarea.error {
+	border: 1px solid $error-color !important;
+}
+div.form-error {
+	display: none;
+	span{
+		color: $error-color !important;
+		margin-top: 15px;
+		font-size: 18px;
+		font-weight: bold;
+		padding: 5px;
+	}
+}
+
+#document_file-error{
+	margin-left: 15px;
+}
+
+.office_section {
+	label.error {
+		margin-left: 33.33%;
+	}
+}
+
+label#contract_amount-error {
+    margin-left: 33.33333333%;
+}
+label#contract_notes-error {
+	margin-left: 33.33333333%;
+}
+label#contract_contact-error {
+	margin-left: 33.33333333%;
+}
+label#contract_email-error {
+	margin-left: 33.33333333%;
+}
+label#contract_phone-error {
+	margin-left: 33.33333333%;
+}
+label#contract_fax-error {
+	margin-left: 33.33333333%;
+}
+label#contract_address-error {
+	margin-left: 33.33333333%;
+}
+
+
+form[id ^= officeForm] {
+	label.error{
+		margin-left: 33.33333333%;
+	}
+}
+
+form[id ^= contractForm] {
+	label.error:not(#contract_sent_date-error, #contract_signed_date-error, 
+		#contract_expire_date-error, #contract_file-error) {
+		margin-left: 33.33333333%;
+	}
+}
+#contract_sent_date-error, #contract_signed_date-error, #contract_expire_date-error {
+	max-width: 55%;
+}
+#invoiceForm, #updateInvoiceForm {
+	.form-error {
+		margin-bottom: 15px;
+	}
+}
+
+#ebrochureForm {
+	.form-error {
+		margin-bottom: 20px;
+	}
+}
+
+label#android_link-error {
+	margin-left: 30px;
+}
+label#ios_link-error {
+	margin-left: 30px;
+}
+
+label#custom_link-error {
+    margin-left: 10px;
+}
+
+label#student_name-error,label#student_phone-error,label#student_address-error,label#student_email-error {
+    margin-left: 33.33333333%;
+}
+label#student_image-error {
+    margin-left: 20px;
+}
+
+#overviewForm {
+	.form-error	{
+		margin: 10px 0px 25px 8%;
+	}
+	label.error {
+		margin-top: 5px;
+		margin-bottom: -20px;
+	}
+}
+#linksForm {
+	label.error {
+	    margin-left: 19px;
+	    margin-bottom: 0px;
+	}
+}
+#AAPersonalInfoForm, #ADPersonalInfoForm, #IDPersonalInfoForm, #CDPersonalInfoForm, #addUserForm, #add_agency_user, #addContractModal {
+	label.error {
+		margin-left: 33.33%;
+	}
+}
+#addContractModal{
+	.contract-dates {
+		label.error {
+			margin-left: 0;
+		}
+	}
+}
+#formLog {
+	label.error {
+		margin-left: 0px;
+	}
+}
+#expiration_alert_period_custom-error {
+	margin-left: 68% !important;
+}
+.custom-period {
+	input.error {
+		border: none !important;
+	}
+}
+
+form#resetPasswordForm {
+	label.error {
+		margin-left: 18%;
+	}
+}
+
+label#profile_photo5-error, label#profile_photo4-error, label#profile_photo3-error {
+	clear: both;
+	margin-right: 0;
+	margin-left: 0 !important;
+    max-width: 303px;
+    float: right;
+}
+
+label#profile_photo1-error {
+	@extend label#profile_photo5-error;
+	margin-right: -80px;
+}
+
+#agencyPersonalInfo {
+	label.error {
+		margin-left: 33.3%;
+	}
+}
+
+#schoolLoginForm {
+	label#school-email-error{
+		margin-top: -18px;
+	}	
+	label.error {
+		float: left;
+	}
+}
+#agentLoginForm {
+	@extend #schoolLoginForm;
+	label#agent-email-error{
+		margin-top: -18px;
+	}
+}
+#contactUsForm {
+	label.error {
+		margin-left: 102px;
+	}
+}

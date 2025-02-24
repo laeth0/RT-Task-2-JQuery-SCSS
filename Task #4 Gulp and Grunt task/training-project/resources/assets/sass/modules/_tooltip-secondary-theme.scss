@@ -1,0 +1,144 @@
+p.tip-content {
+  margin: 2px 5px;
+  font-size: 16px;
+}
+
+//Dashboard Theme
+
+.tooltipster-sidetip.dashboard-theme .tooltipster-box {
+  background: $white;
+  //border: 2px solid darken($red,25%);
+//  @include opacity-color(0.9);
+  @include border-radius(6px, 6px, 6px, 6px);
+  @include box-shadow(2px, 2px, 1px, 0px, $dark-gray);
+  @include opacity-color(0.8);
+}
+.tooltipster-sidetip.dashboard-theme.tooltipster-bottom .tooltipster-arrow {
+  @include opacity-color(0.8);
+	.tooltipster-arrow-border {
+		border-bottom-color: darken($dark-gray,25%);
+    //@include opacity-color(0.8);
+	}
+  	.tooltipster-arrow-background {
+  		border-bottom-color: $dark-gray;
+      @include opacity-color(0.8);
+  	}
+  }
+  .tooltipster-sidetip.dashboard-theme.tooltipster-top .tooltipster-arrow {
+    @include opacity-color(0.8);
+	.tooltipster-arrow-border {
+		border-top-color: darken($dark-gray,25%);
+    //@include opacity-color(0.8);
+	}
+  	.tooltipster-arrow-background {
+  		border-top-color: $white;
+      @include opacity-color(0.8);
+  	}
+  }
+
+.tooltipster-sidetip.dashboard-theme .tooltipster-content {
+  color: $dark-gray;
+  padding: 8px;
+}
+
+//Prompet Message Theme
+// To show the prompt message at the center of the dashboard list
+.prompt-msg-theme {
+  position: fixed;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%);
+}
+.dashboard-list {
+  position: relative;
+}
+.tooltipster-sidetip.prompt-msg-theme .tooltipster-box {
+  background: $white;
+  @include opacity-color(0.8);
+  @include border-radius(6px, 6px, 6px, 6px);
+  @include box-shadow(2px, 2px, 1px, 1px, $dark-gray);
+}
+
+.tooltipster-sidetip.prompt-msg-theme .tooltipster-content {
+  color: $dark-gray;
+  padding: 8px;
+}
+
+.disable-cover {
+  display: none;
+}
+
+.prompt-msg {
+  padding: 10px;
+  .tip-content {
+    margin: 15px 5px;
+  }
+  h3 {
+    margin-top: 5px;
+  }
+  .btn-success {
+    @include opacity-color(.8);
+    float: right;
+    margin-right: 8px;
+    padding: 4px 20px;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  label {
+    font-size: 14px;
+    margin: 0;
+    font-weight: 200;
+  }
+  .message-show {
+    display: inline-block;
+    width: 21px;
+    height: 21px;
+    border: 2px solid $dark-gray;
+    border-radius: 50%;
+    vertical-align: -6px;
+    margin-right: 6px;
+    position: relative;
+    .checked {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+     // border-radius: 50%;
+      @include centerer();
+    }
+  }
+  .show-lbl {
+    position: relative;
+    font-size: 16px;
+    &:hover {
+      .message-show {
+        background: $light-gray;
+        border: 3px solid $dark-gray;
+        .checked {
+          background: $light-gray;
+          @include opacity-color(0.3);
+        }
+      }
+      input[type=checkbox]:checked + .message-show {
+       background: $sea-green;
+       .checked {
+          background: $sea-green;
+          @include opacity-color(1);
+        }
+      }
+    }
+    input[type='checkbox'] {
+      @include opacity(0);
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    input[type=checkbox]:checked + .message-show {
+        background: $sea-green;
+        .checked {
+          background: $sea-green;
+        }
+    }
+  }
+}
+
+

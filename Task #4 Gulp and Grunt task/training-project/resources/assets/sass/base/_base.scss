@@ -1,0 +1,568 @@
+@use "variables";
+@use "mixins" as *;
+.not-logged {
+  .page-wrapper {
+    top: 0px !important;
+  }
+
+  .content-area {
+    padding: 0px;
+  }
+
+  .home-page-link {
+    a {
+      cursor: pointer;
+      padding: 0px 10px;
+      margin-left: 25px;
+      margin-bottom: 25px;
+      font-size: 18px;
+      line-height: 66px;
+    }
+  }
+}
+
+.btn-primary {
+  background: variables.$soft-blue; // Use the variable with the namespace
+  border: 0;
+  @include border-radius(3px, 3px, 3px, 3px);
+  padding: 6px 20px;
+}
+
+.btn-success {
+  background: variables.$sea-green;
+  border: 0;
+  @include border-radius(4px, 4px, 4px, 4px);
+  padding: 7px 20px;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.modal-backdrop {
+  background-color: variables.$white;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.bg-gray {
+  background-color: variables.$light-gray;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.shadow {
+  padding: 25px;
+  background: variables.$white;  
+  @include box-shadow(0px, 10px, 10px, 0px, variables.$off-gray);  
+  @include border-radius(5px, 5px, 5px, 5px);
+}
+
+.shadow-header {
+  position: relative;
+  height: 130px;  
+  color: variables.$white;
+  h2 {
+    margin: 0px;
+    margin-left: 60px;
+    @include centerer(false, true);
+  }
+}
+
+.shadow-body {
+  hr {
+    margin: 5px 0px;
+    border: 1px solid variables.$light-gray;
+    width: 100%;
+  }
+}
+
+.clean-input {
+  border: 0;
+  background: none;
+  box-shadow: none;
+}
+
+.dashborads-menu {
+  font-size: 20px;
+  padding: 9px 5px 9px 5px;
+  margin: 0 5px 0 -15px;
+  color: $off-blue;
+}
+
+.search-input {
+  height: 37px;
+  padding: 10px;
+  border: 0;
+  font-size: 16px;
+  font-style: italic;
+  color: variables.$off-blue-gray;
+  background: variables.$gray-btn;
+  @include border-radius(3px, 3px, 3px, 3px);
+  box-shadow: none;
+}
+
+.sortby-lbl {
+  margin: 2px 5px;
+  font-size: 16px;
+  font-weight: normal;
+  color: variables.$off-gray;
+  height: 33px;
+  line-height: 33px;
+}
+
+.sortby-btn {  
+  height: 37px;
+  width: 130px;
+  font-size: 16px;
+  color: variables.$off-blue;
+  background: variables.$gray-btn;
+  border: 0;
+  @include border-radius(3px, 3px, 3px, 3px);
+}
+
+.sortby-panel {
+  position: relative;
+}
+
+.sendto-lbl {
+  @extend .sortby-lbl;
+}
+
+.sendto-btn {
+  @extend .sortby-btn;
+}
+
+.sendto-menu {
+  @extend .sortby-menu;
+}
+
+.grid-items {
+  .grid-item {
+    .shadow {
+      position: relative;
+      margin: 25px 0;
+      height: 280px;
+      overflow: hidden;
+      position: relative;
+      padding: 25px;
+      a {
+        .image {
+          width: 80px;
+          max-height: 80px;
+          margin-bottom: 12px;
+        }
+      }
+    }
+  }
+}
+
+ul.nav-tabs {
+  border: 0;
+  li {
+    a {
+      border: 0;
+      padding: 20px 0 30px 0;
+      color: $off-blue;
+      font-size: 24px;
+      &:hover, &:focus {
+        border: 0;
+        background: none;
+      }
+      label {
+        font-weight: normal;
+      }
+      .subtitle {
+        color: variables.$off-gray;
+        font-size: 16px;
+      }
+    }
+    &.active {
+      a {
+        border: 0;
+        color: variables.$blue;
+        border-bottom: 4px solid variables.$blue;
+        &:hover, &:focus {
+          border: 0;
+          border-bottom: 4px solid variables.$blue;
+          background: none;
+        }
+      }
+    }
+  }
+}
+
+.agency-icon {
+  height: 35px;
+  margin-top: 10px;
+}
+
+.social-icons {
+  height: 81px;
+  margin-top: 10px;
+}
+
+.web-icon {
+  height: 55px;
+  margin-top: 0px;
+}
+
+.office {
+  background: url('../images/agency/office-icon.png') no-repeat center center;
+  background-size: contain;
+  @extend .web-icon;
+}
+.contact {
+  background: url('../images/agency/contact-icon.png') no-repeat center center;
+  background-size: contain;
+  @extend .agency-icon;
+}
+
+.email {
+  background: url('../images/agency/email-icon.png') no-repeat center center;
+  background-size: contain;
+  @extend .agency-icon;
+}
+
+.phone {
+  background: url('../images/agency/phone-icon.png') no-repeat center center;
+  background-size: contain;
+  @extend .agency-icon;
+}
+
+.fax {
+  background: url('../images/agency/fax-icon.png') no-repeat center center;
+  background-size: contain;
+  @extend .agency-icon;
+}
+
+.address {
+  background: url('../images/agency/address-icon.png') no-repeat center center;
+  background-size: contain;
+  @extend .agency-icon;
+}
+
+.birthday {
+  background: url("../images/agency/birthday.png") no-repeat center center;
+  background-size: contain;
+}
+
+.facebook-link {
+  background: url('../images/agency/facebook-icon2.png') no-repeat center center;
+  background-size: contain;
+  @extend .agency-icon;
+}
+
+.linkedin {
+  background: url('../images/agency/linkedin-icon.png') no-repeat center center;
+  background-size: contain;
+  @extend .agency-icon;
+}
+
+.performance {
+  background: url('../images/agency/performance-icon.png') no-repeat center center;
+  background-size: contain;
+  @extend .agency-icon;
+}
+
+.students {
+  background: url('../images/agency/students-icon.png') no-repeat center center;
+  background-size: contain;
+  @extend .agency-icon;
+}
+
+.agency-status-icon {
+  background: url('../images/agency/agency-status.png') center center no-repeat;
+  background-size: contain;
+  @extend .agency-icon;
+}
+
+.agency-rank-icon {
+  background: url('../images/agency/agency-rank.png') center center no-repeat;
+  background-size: contain;
+  @extend .agency-icon;
+}
+
+.contract-expiration-icon {
+  background: url('../images/agency/contract-expiration.png') center center no-repeat;
+  background-size: contain;
+  @extend .agency-icon;
+}
+
+.expiration-alert-icon {
+  background: url('../images/agency/expiration-alert.png') center center no-repeat;
+  background-size: contain;
+  @extend .agency-icon;
+}
+
+.invoices-icon {
+  background: url('../images/agency/invoices.png') center center no-repeat;
+  background-size: contain;
+  @extend .agency-icon;
+}
+
+.restriction-icon {
+  background: url('../images/agency/agency-restriction-icon.png') center center no-repeat;
+  background-size: contain;
+  @extend .agency-icon;
+}
+
+.contract-file-icon {
+  background: url('../images/agency/contract-file.png') center center no-repeat;
+  background-size: contain;
+  @extend .agency-icon;
+}
+
+.archive-icon {
+  background: url('../images/agency/archive-icon.png') center center no-repeat;
+  background-size: contain;
+  @extend .agency-icon;
+}
+
+.signature-icon {
+  background: url('../images/setup/signature-icon.png') no-repeat center center;
+  background-size: contain;
+  @extend .agency-icon;
+
+}
+
+.website-icon {
+  background: url('../images/setup/website-icon.png') no-repeat center center;
+  background-size: contain;
+  @extend .web-icon;
+
+}
+
+.sms-icon {
+  background: url('../images/setup/sms-icon.png') no-repeat center center;
+  background-size: contain;
+  @extend .agency-icon;
+}
+
+.renren {
+  background: url('../images/socail/renren-icon.png') no-repeat center center;
+  background-size: contain;
+  @extend .social-icons;
+}
+
+.facebook {
+  background: url('../images/socail/facebook-icon.png') no-repeat center center;
+  background-size: contain;
+  @extend .social-icons;
+}
+
+.twitter {
+  background: url('../images/socail/twitter-icon.png') no-repeat center center;
+  background-size: contain;
+  @extend .social-icons;
+}
+
+.pinterest {
+  background: url('../images/socail/pinterest-icon.png') no-repeat center center;
+  background-size: contain;
+  @extend .social-icons;
+}
+
+.bftv {
+  background: url('../images/socail/bftv-icon.png') no-repeat center center;
+  background-size: contain;
+  @extend .social-icons;
+}
+
+.wechat {
+  background: url('../images/socail/wechat-icon.png') no-repeat center center;
+  background-size: contain;
+  @extend .social-icons;
+}
+
+.instagram {
+  background: url('../images/socail/instagram-icon.png') no-repeat center center;
+  background-size: contain;
+  @extend .social-icons;
+}
+
+.weibo {
+  background: url('../images/socail/weibo-icon.png') no-repeat center center;
+  background-size: contain;
+  @extend .social-icons;
+}
+
+.fileUpload {
+  position: relative;
+  overflow: hidden;
+  margin-top: 5px;
+}
+
+.fileUpload input.upload {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  cursor: pointer;
+  @include opacity(0);
+}
+
+.bottom-offset {
+  margin-bottom: 5px;
+}
+
+.no-padding {
+  padding: 0px !important;
+}
+
+.custom-tabs {
+  ul.nav-tabs {
+    li {
+      margin: 5px 0px;
+      a {
+        height: 33px;
+        padding: 0px;
+        margin-right: 0px;
+        border: 1px solid $off-blue;
+        font-size: 20px;
+        line-height: 35px;
+        @include border-radius(4px, 4px, 4px, 4px);
+        &:hover {
+          color: $white;
+          border-style: none;
+          background-color: darken($off-green, 20%);
+        }
+      }
+      &.active {
+        a {
+          color: $white;
+          border: 0px;
+          background-color: $off-green;
+          &:hover {
+            color: $white;
+            border-style: none;
+          }
+          &:focus {
+            background-color: $off-green;
+            color: $white;
+          }
+        }
+      }
+      h3 {
+        padding: 0px;
+        margin: 0px;
+        line-height: 30px;
+      }
+      &.btn {
+        padding: 0px;
+      }
+    }
+  }
+}
+
+.agincies-premisions {
+  .rounded-checkbox {
+    margin-left: 40px;
+    overflow: hidden;
+  }
+}
+
+.checkbox-wrapper {
+  position: relative;
+  height: 63px;
+  margin-right: 35px;
+  .rounded-checkbox {
+    overflow: hidden;
+    label {
+      padding: 0px;
+      cursor: pointer;
+    }
+    i {
+      margin: 0px;
+      padding: 0px 2px;
+      font-size: 28px;
+      border-radius: 50%;
+    }
+    input[type=checkbox] {
+      position: absolute;
+      @include opacity(0);
+      left: 5px;
+      top: 20px;
+    }
+    h3 {
+      display: inline-block;
+      margin: 0px;
+      padding-left: 10px;
+      height: 28px;
+    }
+    input[type=checkbox]:checked + i {
+      background: $white;
+      color: $off-green;
+      font-size: 32px;
+    }
+    input[type=checkbox]:checked + i + h3 {
+      padding-left: 8px;
+    }
+  }
+}
+
+.hide-overflow { 
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.gray-line {
+  border: 1px solid $off-gray;
+  //width: 120%;
+  margin: 15px -65px;
+  margin-bottom: 25px;
+}
+
+textarea {
+  resize: vertical;
+}
+
+//this to git rid of the browser mandatory border for the empty images
+img[src=""] {
+    visibility: hidden;
+}
+
+.backend-msg {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+input {
+    border: 2px solid $light-gray;
+    //border: none;
+}
+
+input[disabled] {
+  border: none;
+}
+//hide thr nottification bell from all the pages temporarily  
+#show-notifications {
+  display: none;
+}
+
+.alert-minimalist {
+    background-color: rgb(249, 249, 249);
+    border-color: rgba(149, 149, 149, 0.3);
+    border-radius: 3px;
+    color: rgb(149, 149, 149);
+    padding: 10px;
+}
+.alert-minimalist > [data-notify="icon"] {
+    height: 50px;
+    margin-right: 12px;
+}
+.alert-minimalist > [data-notify="title"] {
+    color: rgb(51, 51, 51);
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+.alert-minimalist > [data-notify="message"] {
+    font-size: 95%;
+}

@@ -1,0 +1,136 @@
+@mixin border-radius($topright: 0, $bottomright: 0, $bottomleft: 0, $topleft: 0) {
+  -webkit-border-top-right-radius: $topright;
+  -webkit-border-bottom-right-radius: $bottomright;
+  -webkit-border-bottom-left-radius: $bottomleft;
+  -webkit-border-top-left-radius: $topleft;
+  -moz-border-radius-topright: $topright;
+  -moz-border-radius-bottomright: $bottomright;
+  -moz-border-radius-bottomleft: $bottomleft;
+  -moz-border-radius-topleft: $topleft;
+  border-top-right-radius: $topright;
+  border-bottom-right-radius: $bottomright;
+  border-bottom-left-radius: $bottomleft;
+  border-top-left-radius: $topleft;
+}
+
+// =============================================================================
+// Font Face
+// =============================================================================
+
+@mixin font-face($name, $path, $weight: null, $style: null, $exts: eot woff2 woff ttf svg) {
+  $src: null;
+
+  $extmods: (
+          eot: "?",
+          svg: "#" + str-replace($name, " ", "_")
+  );
+
+  $formats: (
+          otf: "opentype",
+          ttf: "truetype"
+  );
+
+  @each $ext in $exts {
+    $extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext);
+    $format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
+    $src: append($src, url(quote($path + "." + $extmod)) format(quote($format)), comma);
+  }
+
+  @font-face {
+    font-family: quote($name);
+    font-style: $style;
+    font-weight: $weight;
+    src: $src;
+  }
+}
+
+@mixin opacity($opacity) {
+  // IE 8
+  -ms-filter: "progid:DXImageTransform.Microsoft.opacity(Opacity=$opacity*100)";
+  // IE 5-7
+  filter: opacity($opacity);
+  // Real Browsers
+  -webkit-opacity: $opacity;
+  -moz-opacity: $opacity;
+  -khtml-opacity: $opacity;
+  opacity: $opacity;
+  background: transparent;
+  color: transparent;
+}
+
+@mixin opacity-color($opacity) {
+  // IE 8
+  -ms-filter: "progid:DXImageTransform.Microsoft.opacity(Opacity=$opacity*100)";
+  // IE 5-7
+  filter: opacity($opacity);
+  // Real Browsers
+  -webkit-opacity: $opacity;
+  -moz-opacity: $opacity;
+  -khtml-opacity: $opacity;
+  opacity: $opacity;
+}
+
+@mixin transform($transforms) {
+  -moz-transform: $transforms; /* Firefox 16 */
+  -o-transform: $transforms; /* Opera 23 */
+  -ms-transform: $transforms; /* IE 9 */
+  -webkit-transform: $transforms; /* Chrome 36 , Safari */
+  transform: $transforms;
+}
+
+@mixin centerer($horizontal: true, $vertical: true) {
+  position: absolute;
+  @if ($horizontal and $vertical) {
+    top: 50%;
+    left: 50%;
+    @include transform(translate(-50%, -50%));
+  } @else if ($horizontal) {
+    left: 50%;
+    @include transform(translate(-50%, 0%));
+  } @else if ($vertical) {
+    top: 50%;
+    @include transform(translate(0%, -50%));
+  }
+}
+
+@mixin box-shadow($top, $left, $blur, $size, $color, $inset: false) {
+  @if $inset {
+    -webkit-box-shadow: inset $top $left $blur $size $color;
+    -moz-box-shadow: inset $top $left $blur $size $color;
+    box-shadow: inset $top $left $blur $size $color;
+  } @else {
+    -webkit-box-shadow: $top $left $blur $size $color;
+    -moz-box-shadow: $top $left $blur $size $color;
+    box-shadow: $top $left $blur $size $color;
+  }
+}
+
+@mixin linear-gradient($direction, $color-stops1, $color-stops2...) {
+  background: -webkit-linear-gradient(legacy-direction($direction), $color-stops1, $color-stops2);
+  background: -moz-linear-gradient($direction, $color-stops1, $color-stops2);
+  background: -o-linear-gradient($direction, $color-stops1, $color-stops2);
+  background: -ms-linear-gradient($direction, $color-stops1, $color-stops2);
+  background: linear-gradient(to $direction, $color-stops1, $color-stops2);
+}
+
+@mixin appearance($value) {
+  -webkit-appearance: $value;
+  -moz-appearance: $value;
+  appearance: $value;
+}
+
+@mixin placeholder-style {
+  ::-webkit-input-placeholder {
+    @content
+  }
+  :-moz-placeholder {
+    @content
+  }
+  ::-moz-placeholder {
+    @content
+  }
+  :-ms-input-placeholder {
+    @content
+  }
+}
+

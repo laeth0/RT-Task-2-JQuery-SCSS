@@ -1,0 +1,180 @@
+.school-header {
+  position:fixed;
+  top: 0;
+  left: 0;
+  height: 70px;
+  width: 100%;
+  z-index: 99;
+  color: $white;
+  background: $blue;
+  .user-menu {
+    min-width: 335px;
+    max-width: 50%;
+    color:$white;
+    background-color:$blue;
+    float: right;
+  }
+  .navbar-default {
+    background:none;
+    border:0;
+    line-height: 70px;
+    .navbar-header {
+      .navbar-brand {
+        color:$white;
+        margin:0;
+        padding: 0 15px;
+        height: 100%;
+        line-height: 70px;
+      }
+    }
+    .navbar-right {
+        height: 70px;
+      #show-notifications {
+        position: relative;
+        background: transparent;
+        border: 0px;
+        outline: none;
+        float: left;
+        width: 60px;
+        margin: 0px 10px;
+        height: 70px;
+        svg {
+          width: 32px;
+          height: 70px;
+        }
+        svg > path {
+          fill: $white;
+        }
+        .notification-bell {
+          transform-origin: 50% 0%;
+        }
+        .notification-num {
+            position: absolute;
+            top: 14px;
+            left: 65%;
+            font-size: 16px;
+            border-radius: 50%;
+            width: 22px;
+            height: 22px;
+            background-color: $red-notifications;
+            color: $white;
+            line-height: 22px;
+        }
+      }
+      .dropdown {
+        height: 70px;
+        .dropdown-toggle {
+          padding:2px 1px;
+          height: 70px;
+        }
+        &.open {
+          .dropdown-toggle {
+            background-color: transparent;
+            &:hover, &:focus {
+              color: $light-gray;
+            }
+          }
+        }
+        .fileUpload {
+          height: 70px;
+          margin-top: -1px;
+          .navbar-brand {
+            color: $white;
+            margin: 8px 5px 0px 5px;
+            line-height: 30px;
+            //the following style to hide the school name when it is too long
+            max-width: 335px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+          }
+          .upload-image{
+            background:url('../images/agency/upload-image.png') no-repeat center center;
+            background-size:contain;
+            float: left;
+            width: 50px;
+            height: 50px;
+            margin: 10px 0px;
+            position: relative;
+            overflow: hidden;
+            border-radius: 50%;
+          }
+          img {
+            display: inline;
+            margin: 0 auto;
+            height: 100%;
+            width: 100%;
+            @include border-radius(50%,50%,50%,50%);
+            position: absolute;
+            top: 0;
+            left: 0
+          }
+        }
+        .dropdown-menu {
+          background:$off-gray;
+          padding: 10px;
+          min-width: 92%;
+          .row {
+              margin-right: 5px;
+              margin-left: 5px;
+              white-space: nowrap;
+          }
+          .glyphicon-user {
+            font-size: 24px;
+          }
+          .user-name {
+            font-size: 18px;
+            margin: 0px 6px;
+            //when the name is too long
+            display: inline-block;
+            max-width: 330px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+          }
+          .user-email {
+            font-size: 16px;
+            margin: 12px 0px;
+            //when the email is too long
+            max-width: 330px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+          }
+          li {
+            line-height: 20px;
+          }
+          .divider {
+            margin: 10px -10px;
+          }
+          .profile-btn {
+            display: block;
+            text-align: center;
+            text-decoration: none !important;
+            padding: 4px 20px;
+            font-size: 18px;
+            line-height: normal;
+          }
+          .btn-default {
+            margin-left: 5px;
+              margin-right: 5px;
+              font-size: 18px;
+              border: 0px;
+              line-height: normal;
+          }
+        }
+      }
+    }
+    .navbar-nav>li>a {
+      color: $white;
+    }
+  }
+}
+.agency-header {
+  @extend .school-header;
+  background: $green;
+  .user-menu {
+    color:$white;
+    background :$green;
+  }
+}
