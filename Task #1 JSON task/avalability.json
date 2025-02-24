@@ -1,0 +1,36 @@
+{
+    "product": "Shoes",
+    "attributes": {
+        "colors": [
+            "Brown",
+            "Black",
+            "Nude",
+            "White"
+        ],
+        "sizes": [
+            38,
+            39,
+            40
+        ]
+    },
+    "availability": {
+        "38": {
+            "Brown": true,
+            "Black": true,
+            "Nude": false,
+            "White": true
+        },
+        "39": {
+            "Brown": false,
+            "Black": true,
+            "Nude": false,
+            "White": true
+        },
+        "40": {
+            "Brown": true,
+            "Black": true,
+            "Nude": true,
+            "White": false
+        }
+    }
+}
