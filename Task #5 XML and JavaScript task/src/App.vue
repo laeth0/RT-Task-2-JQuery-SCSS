@@ -18,23 +18,12 @@ const loadXMLData = async () => {
   const url = `http://test.mkttracker.com/iup_dev_builder_new/content/shared/data/controlstitles_${langCode.value.trim()}.xml`;
 
   try {
-    const response = await axios.get(url, {mode: 'no-cors'});
+    const response = await axios.get(url);
     console.log("response", response);
-    // if (!response.ok) {
-    //   throw new Error();
-    // }
 
     const xmlText = await response.data.text();
     const parser = new DOMParser();
     const xmlDoc = parser.parseFromString(xmlText, "text/xml");
-
-    const titleNodes = xmlDoc.getElementsByTagName("title");
-
-    // if (titleNodes.length === 0) {
-    //   throw new Error(`No data found for language: ${langCode.value}`);
-    // }
-
-    titles.value = Array.from(titleNodes).map(node => node.textContent);
   } catch (err) {
     console.log("error", err);
     error.value = err.message;
@@ -61,7 +50,6 @@ const loadXMLData = async () => {
 
 <style scoped>
 .container {
-  font-family: Arial, sans-serif;
   margin: 20px;
 }
 
